@@ -1,0 +1,163 @@
+[logic@esc_b14_stalker_1]
+suitable = {=check_npc_name(esc_b14_stalker_1)} true
+prior = 200
+active = animpoint@esc_b14_stalker_1
+
+[animpoint@esc_b14_stalker_1]
+cover_name = esc_b14_stalker_cover_2
+avail_animations = animpoint_stay_wall
+reach_movement = sprint
+invulnerable = true
+use_camp = false
+meet = meet@stalker_1
+on_npc_in_zone = esc_b14_st_provodnik_id | esc_b110_restr | walker@esc_b14_stalker_1
+on_npc_in_zone2 = esc_b14_st_provodnik_id | esc_b113_restr | walker@esc_b14_stalker_1_1
+on_npc_in_zone3 = esc_b14_st_provodnik_id | esc_b111_restr | walker@esc_b14_stalker_1_2
+on_npc_in_zone4 = esc_b14_st_provodnik_id | esc_b112_restr | walker@esc_b14_stalker_1_3
+on_npc_in_zone5 = esc_b14_st_provodnik_id | esc_b114_restr | walker@esc_b14_stalker_1_4
+
+[walker@esc_b14_stalker_1]
+path_walk = stalker_ostanovka_walk
+;path_look = stalker_1_look
+def_state_standing = guard
+def_state_moving = assault
+meet = meet@stalker_1
+on_timer = 100000 | animpoint@esc_b14_stalker_1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[walker@esc_b14_stalker_1_1]
+path_walk = stalker_tynel_walk
+;path_look = stalker_1_look
+def_state_standing = guard
+def_state_moving = assault
+meet = meet@stalker_1
+on_timer = 120000 | animpoint@esc_b14_stalker_1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[walker@esc_b14_stalker_1_2]
+path_walk = stalker_ferma_walk
+;path_look = stalker_1_look
+def_state_standing = guard
+def_state_moving = assault
+meet = meet@stalker_1
+on_timer = 150000 | animpoint@esc_b14_stalker_1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[walker@esc_b14_stalker_1_3]
+path_walk = stalker_hytor_walk
+;path_look = stalker_1_look
+def_state_standing = guard
+def_state_moving = assault
+meet = meet@stalker_1
+on_timer = 180000 | animpoint@esc_b14_stalker_1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[walker@esc_b14_stalker_1_4]
+path_walk = stalker_garbage_walk
+;path_look = stalker_1_look
+def_state_standing = guard
+def_state_moving = assault
+meet = meet@stalker_1
+on_timer = 170000 | animpoint@esc_b14_stalker_1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+
+[meet@stalker_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+;================================================================
+
+[logic@esc_b14_stalker_2]
+suitable = {=npc_community(stalker)} true
+prior = 200
+active = animpoint@esc_b14_stalker_2
+
+[animpoint@esc_b14_stalker_2]
+cover_name = esc_b14_stalker_cover_1
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@stalker_2
+
+[meet@stalker_2]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+[logic@esc_b14_stalker_3]
+suitable = {=npc_community(stalker)} true
+prior = 200
+active = walker@esc_b14_stalker_3
+
+[walker@esc_b14_stalker_3]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = guard
+meet = meet@esc_b14_stalker_3
+on_timer = 20000|walker@esc_b14_stalker_3_1
+
+[walker@esc_b14_stalker_3_1]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = guard_chasovoy
+on_timer = 15000|walker@esc_b14_stalker_3
+
+
+[meet@esc_b14_stalker_3]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false

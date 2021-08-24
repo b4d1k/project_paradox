@@ -1,0 +1,25 @@
+[logic@gar_a21_bandit_1]
+suitable = {=check_npc_name(gar_a21_bandit_1)}
+prior = 200
+active = walker@gar_a21_bandit_1
+
+[walker@gar_a21_bandit_1]
+path_walk = bandit_1_walk
+path_look = bandit_1_look
+def_state_standing = hide
+def_state_moving = raid
+meet = no_meet
+
+
+
+[logic@gar_a21_bandit_2]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@gar_a21_bandit_2
+
+[walker@gar_a21_bandit_2]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_standing = hide
+def_state_moving = raid
+meet = no_meet

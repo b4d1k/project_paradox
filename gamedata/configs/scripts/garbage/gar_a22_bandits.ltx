@@ -1,0 +1,88 @@
+[logic@gar_a22_bandit_3]
+suitable = {=check_npc_name(gar_a22_bandit_3)}
+prior = 200
+active = animpoint@gar_a22_bandit_3
+
+[animpoint@gar_a22_bandit_3]
+cover_name = gar_a22_bandit_cover_1
+avail_animations = animpoint_sit_higth
+meet = meet@gar_a22_bandit_3
+
+
+[meet@gar_a22_bandit_3]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+[logic@gar_a22_bandit_2]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = animpoint@gar_a22_bandit_2
+
+[animpoint@gar_a22_bandit_2]
+cover_name = gar_a22_bandit_cover_2
+avail_animations = animpoint_sit_low
+use_camp = true
+meet = no_meet
+
+
+
+[logic@gar_a22_bandit_1]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = animpoint@gar_a22_bandit_1
+
+[animpoint@gar_a22_bandit_1]
+cover_name = gar_a22_bandit_cover_3
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = no_meet
+
+
+
+[logic@gar_a22_bandit_4]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = animpoint@gar_a22_bandit_4
+
+[animpoint@gar_a22_bandit_4]
+cover_name = gar_a22_bandit_cover_4
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = no_meet
+
+
+
+[logic@gar_a22_bandit_5]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@gar_a22_bandit_5
+
+[walker@gar_a22_bandit_5]
+path_walk = bandit_sleep_walk
+path_look = bandit_sleep_look
+def_state_standing = sleep
+
+
+
+[logic@gar_a22_bandit_6]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@gar_a22_bandit_6
+
+[walker@gar_a22_bandit_6]
+path_walk = bandit_post_walk
+path_look = bandit_post_look
+def_state_standing = guard_chasovoy
+meet = no_meet

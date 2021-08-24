@@ -1,0 +1,183 @@
+;---Проводник
+[logic@val_a3_stalker_1]
+suitable = {=check_npc_name(val_a3_stalker_1)}
+prior = 200
+active = animpoint@val_a3_stalker_1
+
+[animpoint@val_a3_stalker_1]
+cover_name = val_a3_provodnik_cover
+avail_animations = animpoint_sit_high
+reach_movement = sprint
+invulnerable = true
+use_camp = false
+meet = meet@val_st_provodnik
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+
+[meet@val_st_provodnik]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_ferma_stalker========
+[meet@ferma_stalker]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@val_a3_stalker_2]
+suitable = {=check_npc_name(val_a3_stalker_2)}
+prior = 200
+active = animpoint@val_a3_stalker_2
+
+[animpoint@val_a3_stalker_2]
+cover_name = val_a3_stalker_cover_2
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@val_a3_stalker_2
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_2]:meet@ferma_stalker
+
+
+[logic@val_a3_stalker_3]
+suitable = {=check_npc_name(val_a3_stalker_3)}
+prior = 200
+active = animpoint@val_a3_stalker_3
+
+[animpoint@val_a3_stalker_3]
+cover_name = val_a3_stalker_cover_1
+avail_animations = animpoint_sit_low_guitar
+use_camp = true
+meet = meet@val_a3_stalker_3
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_3]:meet@ferma_stalker
+
+
+[logic@val_a3_stalker_4]
+suitable = {=check_npc_name(val_a3_stalker_4)}
+prior = 200
+active = walker@val_a3_stalker_4
+
+[walker@val_a3_stalker_4]
+path_walk = stalker_sleep_walk
+path_look = stalker_sleep_look
+def_state_standing = sleep
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+
+[logic@val_a3_stalker_5]
+suitable = {=check_npc_name(val_a3_stalker_5)}
+prior = 200
+active = walker@val_a3_stalker_5
+
+[walker@val_a3_stalker_5]
+path_walk = stalker_1_sleep_walk
+path_look = stalker_1_sleep_look
+def_state_standing = sleep
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+
+[logic@val_a3_stalker_6]
+suitable = {=check_npc_name(val_a3_stalker_6)}
+prior = 200
+active = animpoint@val_a3_stalker_6
+
+[animpoint@val_a3_stalker_6]
+cover_name = val_a3_stalker_cover_3
+avail_animations = animpoint_sit_normal_weapon
+use_camp = true
+meet = meet@val_a3_stalker_6
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_6]:meet@ferma_stalker
+
+
+[logic@val_a3_stalker_7]
+suitable = {=check_npc_name(val_a3_stalker_7)}
+prior = 200
+active = animpoint@val_a3_stalker_7
+
+[animpoint@val_a3_stalker_7]
+cover_name = val_a3_stalker_bar_cover
+avail_animations = animpoint_stay_table_drink_vodka
+use_camp = true
+meet = meet@val_a3_stalker_7
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_7]:meet@ferma_stalker
+
+
+[logic@val_a3_stalker_8]
+suitable = {=check_npc_name(val_a3_stalker_8)}
+prior = 200
+active = animpoint@val_a3_stalker_8
+
+[animpoint@val_a3_stalker_8]
+cover_name = val_a3_stalker_1_bar_cover
+avail_animations = animpoint_stay_table_weapon
+use_camp = true
+meet = meet@val_a3_stalker_8
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_8]:meet@ferma_stalker
+
+
+
+[logic@val_a3_stalker_9]
+suitable = {=check_npc_name(val_a3_stalker_9)}
+prior = 200
+active = animpoint@val_a3_stalker_9
+
+[animpoint@val_a3_stalker_9]
+cover_name = val_a3_stalker_cover_4
+avail_animations = animpoint_stay_wall_weapon
+meet = meet@val_a3_stalker_9
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+[meet@val_a3_stalker_9]:meet@ferma_stalker
+
+
+[logic@val_a3_stalker_10]
+suitable = {=check_npc_name(val_a3_stalker_10)}
+prior = 200
+active = walker@val_a3_stalker_10
+
+[walker@val_a3_stalker_10]
+path_walk = stalker_3_walk
+path_look = stalker_3_look
+def_state_moving = patrol
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(val_a3_bandit_zakl)} true
+
+
+[logic@val_a3_bandit_zakl]
+suitable = {=check_npc_name(val_a3_bandit_zakl)}
+prior = 200
+active = animpoint@val_a3_bandit_zakl
+
+[animpoint@val_a3_bandit_zakl]
+cover_name = val_a3_bandit_zakl_cover
+avail_animations = animpoint_sit_knee
+meet = no_meet
+combat_ignore_cond = true

@@ -1,0 +1,103 @@
+
+[logic@esc_nv_animpoint_1]
+active = animpoint@esc_nv_animpoint_1
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_2]
+active = animpoint@esc_nv_animpoint_2
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_3]
+active = animpoint@esc_nv_animpoint_3
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_4]
+active = animpoint@esc_nv_animpoint_4
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_5]
+active = animpoint@esc_nv_animpoint_5
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_6]
+active = animpoint@esc_nv_animpoint_6
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_7]
+active = animpoint@esc_nv_animpoint_7
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_8]
+active = animpoint@esc_nv_animpoint_8
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_9]
+active = animpoint@esc_nv_animpoint_9
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[logic@esc_nv_animpoint_10]
+active = animpoint@esc_nv_animpoint_10
+suitable = {=check_npc_name(sim_default_stalker) =npc_in_zone(esc_novice_village_restr)} true
+prior = 120
+
+[animpoint@esc_nv_animpoint_base]
+reach_movement = walk_noweap
+use_camp = false
+meet = meet@esc_nv_animpoint
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+invulnerable = false
+out_restr = esc_novice_village_restr
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet@esc_nv_animpoint]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+[animpoint@esc_nv_animpoint_1]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_01
+
+[animpoint@esc_nv_animpoint_2]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_02
+
+[animpoint@esc_nv_animpoint_3]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_03
+
+[animpoint@esc_nv_animpoint_4]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_04
+
+[animpoint@esc_nv_animpoint_5]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_05
+
+[animpoint@esc_nv_animpoint_6]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_06
+
+[animpoint@esc_nv_animpoint_7]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_07
+
+[animpoint@esc_nv_animpoint_8]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_08
+
+[animpoint@esc_nv_animpoint_9]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_09
+
+[animpoint@esc_nv_animpoint_10]:animpoint@esc_nv_animpoint_base
+cover_name = esc_nv_cover_10

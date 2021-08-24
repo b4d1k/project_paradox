@@ -1,0 +1,77 @@
+;=========meet_lesopilka_stalker========
+[meet@lesopilka_stalker]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@dsc_a14_stalker_1]
+suitable = {=check_npc_name(dsc_a14_stalker_1)} true
+prior = 200
+active = animpoint@dsc_a14_stalker_1
+
+[animpoint@dsc_a14_stalker_1]
+cover_name = dsc_a14_stalker_cover_1
+avail_animations = animpoint_sit_normal_weapon
+meet = meet@dsc_a14_stalker_1
+
+[meet@dsc_a14_stalker_1]:meet@lesopilka_stalker
+
+
+[logic@dsc_a14_stalker_2]
+suitable = {=check_npc_name(dsc_a14_stalker_2)} true
+prior = 200
+active = animpoint@dsc_a14_stalker_2
+
+[animpoint@dsc_a14_stalker_2]
+cover_name = dsc_a14_stalker_cover
+avail_animations = animpoint_sit_high_drink_vodka
+meet = meet@dsc_a14_stalker_2
+
+[meet@dsc_a14_stalker_2]:meet@lesopilka_stalker
+
+
+[logic@dsc_a14_stalker_3]
+suitable = {=check_npc_name(dsc_a14_stalker_3)} true
+prior = 200
+active = walker@dsc_a14_stalker_3
+
+[walker@dsc_a14_stalker_3]
+path_walk = stalker_sleep_walk
+path_look = stalker_sleep_look
+def_state_standing = sleep
+meet = no_meet
+
+
+[logic@dsc_a14_stalker_4]
+suitable = {=check_npc_name(dsc_a14_stalker_4)} true
+prior = 200
+active = walker@dsc_a14_stalker_4
+
+[walker@dsc_a14_stalker_4]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_moving = patrol
+meet = no_meet
+
+
+[logic@dsc_a14_stalker_5]
+suitable = {=check_npc_name(dsc_a14_stalker_5)} true
+prior = 200
+active = walker@dsc_a14_stalker_5
+
+[walker@dsc_a14_stalker_5]
+path_walk = stalker_2_walk
+path_look = stalker_2_look
+def_state_moving = patrol
+meet = meet@dsc_a14_stalker_5
+
+[meet@dsc_a14_stalker_5]:meet@lesopilka_stalker

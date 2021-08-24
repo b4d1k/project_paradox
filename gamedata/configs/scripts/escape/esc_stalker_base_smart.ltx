@@ -1,0 +1,49 @@
+[smart_terrain];esc_stalker_base_smart
+squad_id = 1
+def_restr = esc_underground_bar_restrictor
+smart_control = smart_control
+respawn_params = respawn@esc_stalker_base_smart
+max_population = 6
+arrive_dist = 65
+
+[respawn@zat_stalker_base_smart]
+spawn_stalker@novice
+spawn_stalker@advanced
+spawn_stalker@master
+
+[spawn_stalker@novice]
+spawn_squads = stalker_sim_squad_novice
+spawn_num = {-zat_b28_heli_3_searched -zat_b100_heli_2_searched -zat_b101_heli_5_searched} 4, 0 
+
+[spawn_stalker@advanced]
+spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_novice
+spawn_num = {+jup_b218_pripyat_group_gathering} 0, {+zat_b28_heli_3_searched} 4, {+zat_b100_heli_2_searched} 4, {+zat_b101_heli_5_searched} 4, 0
+
+[spawn_stalker@master]
+spawn_squads = stalker_sim_squad_veteran, stalker_sim_squad_advanced
+spawn_num = {+jup_b218_pripyat_group_gathering} 4, 0
+
+[smart_control]
+noweap_zone = esc_underground_bar_restrictor
+alarm_start_sound = zat_a2_base_alarm
+alarm_stop_sound = zat_a2_base_relax
+
+[exclusive]
+esc_underground_stalker_barmen = escape\zat_a2_stalker_barmen.ltx
+;generic jobs
+esc_bar_animp_1 = escape\esc_bar_logic.ltx
+esc_bar_animp_2 = escape\esc_bar_logic.ltx
+esc_bar_animp_3 = escape\esc_bar_logic.ltx
+esc_bar_animp_4 = escape\esc_bar_logic.ltx
+esc_bar_animp_5 = escape\esc_bar_logic.ltx
+esc_bar_animp_6 = escape\esc_bar_logic.ltx
+esc_bar_animp_7 = escape\esc_bar_logic.ltx
+esc_bar_animp_8 = escape\esc_bar_logic.ltx
+esc_bar_animp_9 = escape\esc_bar_logic.ltx
+esc_bar_animp_10 = escape\esc_bar_logic.ltx
+esc_bar_animp_11 = escape\esc_bar_logic.ltx
+esc_bar_animp_12 = escape\esc_bar_logic.ltx
+esc_bar_animp_13 = escape\esc_bar_logic.ltx
+esc_bar_animp_14 = escape\esc_bar_logic.ltx
+esc_bar_animp_15 = escape\esc_bar_logic.ltx
+esc_bar_animp_16 = escape\esc_bar_logic.ltx

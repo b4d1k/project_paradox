@@ -1,0 +1,26 @@
+-- Project Paradox dialog functions
+-- by maks[stalkerok]
+
+function give_first_storyline_quest()
+ task_manager.get_task_manager():give_task("esc_storyline_task_1")
+end
+
+function give_tolik_task()
+ task_manager.get_task_manager():give_task("esc_tolik_task")
+end
+
+function give_stalker_habar()
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "esc_tolik_habar")
+end
+
+function tolik_task_nagrada_give()
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "esc_tolik_habar")
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, "10000")
+end
+
+function check_tolik_habar_have()
+    if db.actor:object("esc_tolik_habar") then
+        return true
+    end
+    return false
+end

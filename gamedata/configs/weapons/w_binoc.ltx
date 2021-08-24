@@ -1,0 +1,169 @@
+; Ѕинокль тактический
+;-(TrickSR)-----------------------------------------
+[wpn_binoc]:identity_immunities,weapon_probability,default_weapon_params,wpn_binoc_sounds
+GroupControlSection					= spawn_group
+$spawn								= "weapons\binocular"
+$npc								= on					; option for Level Editor
+$prefetch 							= 8
+scheduled							= off					; option for ALife Simulator
+cform								= skeleton
+class								= WP_BINOC
+description							= st_binocular_descr
+
+ef_main_weapon_type					= 5
+ef_weapon_type						= 0
+
+;-------------------------------------------------------------------------------
+inv_name		 					= st_binocular_name
+inv_name_short						= st_binocular_name
+inv_weight		 					= 1.0
+
+inv_grid_width						= 2
+inv_grid_height						= 1
+inv_grid_x							= 16
+inv_grid_y							= 8
+
+;-------------------------------------------------------------------------------
+cost								= 800
+hud									= wpn_binoc_hud
+visual								= dynamics\devices\dev_binoculars\dev_binoculars.ogf
+
+ph_mass								= 1
+;-------------------------------------------------------------------------------
+ammo_class		 					= ammo_9x19_fmj
+
+startup_ammo						= 0
+ammo_current		 				= 0
+ammo_elapsed		 				= 0
+ammo_limit		 					= 0
+ammo_mag_size		 				= 0
+
+show_ammo							= false
+
+hand_dependence		 				= 1
+single_handed						= 0
+
+;-““’---------------------------------------------------------------------------
+hit_power							= 0.00, 0.00, 0.00, 0.00
+hit_impulse		 				 	= 0
+hit_type							= fire_wound
+fire_distance						= 0
+bullet_speed				 	 	= 0
+rpm									= 0
+rpm_empty_click 	 				= 0
+
+misfire_probability					= 0.0					;веро€тность осечки при максимальном износе!!!old - now not working
+misfire_start_condition				= 0.0					;изношенность, при которой по€вл€етс€ шанс осечки
+misfire_end_condition				= 0.0					;изношеность при которой шанс осечки становитс€ константным
+misfire_start_prob	 				= 0.0					;шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob	 				= 0.0					;шанс осечки при изношености больше чем misfireEndCondition
+condition_shot_dec					= 0.0					;увеличение изношености при одиночном выстреле
+condition_queue_shot_dec			= 0.0					;увеличение изношености при выстреле очередью
+
+;---DOF-------------------------------------------------------------------------
+;zoom_dof							= -1.0, 10.0, 350
+reload_dof							= 0.0, 0.5, 5, 1.7
+
+;-ƒисперси€---------------------------------------------------------------------
+fire_dispersion_base				= 0
+fire_dispersion_condition_factor	= 0
+
+;-отдача------------------------------------------------------------------------
+cam_relax_speed						= 5.5
+cam_dispersion						= 0
+cam_max_angle						= 0
+cam_max_angle_horz					= 0
+cam_step_angle_horz					= 0
+
+PDM_disp_base						= 0.01
+PDM_disp_vel_factor					= 0.01
+PDM_disp_accel_factor				= 0.01
+PDM_disp_crouch						= 0.01
+PDM_disp_crouch_no_acc				= 0.01
+
+disp_vel_factor						= 0.1
+disp_crouch_factor					= 0.75
+disp_jump_factor					= 3
+
+;- for AI ----------------------------------------------------------------------
+min_radius							= 100
+max_radius							= 150
+
+;-------------------------------------------------------------------------------
+slot 			 					= 4						; // binocular
+animation_slot						= 13					; type of the animation that will be used
+
+position							= -0.08 , -0.05 , 0.05
+normal								= 0, 1, 0
+direction							= 0, 0, 1
+orientation							= 0 , -90, 70
+
+flame_particles		 				= weapons\generic_weapon05
+smoke_particles		 				= weapons\generic_shoot_00
+
+fire_point 							= 0.0, 0.133, 0.161
+shell_point		 					= 0.0, 0.133, 0.047
+shell_dir		 					= 0.0, 0.0, 0.4
+shell_particles	 					= weapons\generic_shells
+
+;-STRAP PARAMETERS--------------------------------------------------------------
+
+light_color		 					= 0.6,0.5,0.3
+light_range		 					= 3.0
+light_var_color		 				= 0.05
+light_var_range		 				= 0.5
+light_time 		 					= 0.2
+
+;-addons------------------------------------------------------------------------
+scope_status						= 1
+silencer_status						= 0
+grenade_launcher_status				= 0
+
+zoom_enabled						= true
+scope_texture						= wpn_crosshair_bino
+scope_zoom_factor					= 5			;x12
+
+vision_present				= true
+vis_frame_speed				= 0				; скорость, с которой наводитс€ рамка на цель
+vis_frame_color				= 0.7,0.7,0.7,1.0	; цвет рамки RGBA (A) Ќе учитываетс€
+
+attach_angle_offset					= 3.080506,-1.493053,-1.202040	;устанавливаетс€ в радианах Angle*PI/180
+attach_position_offset				= 0.080000,0.021273,0.100000
+attach_bone_name					= bip01_r_hand
+auto_attach							= false
+
+[wpn_binoc_hud]:hud_base
+zoom_hide_crosshair = true
+
+hands_position				= -0.0085,-0.2,0.2
+hands_orientation			= 5.85,5.45,-0.95
+
+hands_position_16x9				= -0.0085,-0.2,0.2
+hands_orientation_16x9			= 5.85,5.45,-0.95
+
+item_position					= 0,0,0
+item_orientation				= 0,0,0
+
+item_visual             	= dynamics\devices\dev_binoculars\dev_binoculars_hud
+attach_place_idx				= 0
+
+anm_show						= bino_draw
+anm_hide						= bino_holster
+anm_idle						= bino_idle
+anm_idle_aim					= bino_aim
+anm_idle_moving					= bino_move
+anm_idle_moving_crouch			= bino_crouch
+anm_idle_sprint					= bino_sprint
+anm_bore						= bino_bore
+
+aim_hud_offset_pos			= 0.0,0.022,-0.05
+aim_hud_offset_rot			= 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9		= 0.0,0.022,-0.05
+aim_hud_offset_rot_16x9		= 0.0,0.0,0.0
+
+gl_hud_offset_pos				= 0,0,0
+gl_hud_offset_rot				= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0

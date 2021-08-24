@@ -1,0 +1,38 @@
+[logic@esc_b5_stalker_1]
+suitable = {=check_npc_name(esc_b5_stalker_1)} true
+prior = 200
+active = animpoint@esc_b5_stalker_1
+
+[animpoint@esc_b5_stalker_1]
+cover_name = esc_b5_stalker_cover_1
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@esc_b5_stalker_1
+
+[meet@esc_b5_stalker_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+
+[logic@esc_b5_stalker_2]
+suitable = {=npc_community(stalker)} true
+prior = 200
+active = walker@esc_b5_stalker_2
+
+[walker@esc_b5_stalker_2]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = sleep
+meet = no_meet

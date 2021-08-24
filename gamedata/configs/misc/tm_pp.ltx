@@ -1,0 +1,23 @@
+; Project Paradox tasks
+; by maks[stalkerok]
+
+; Escape
+
+[esc_tolik_task]
+icon = ui_inGame2_PD_Torgovets_informatsiey
+prior = 30
+storyline = false
+title = {+esc_tolik_task_habar_have} esc_tolik_task_habar_have_name, esc_tolik_task_name
+descr = {+esc_tolik_task_habar_have} esc_tolik_task_habar_have_text, esc_tolik_task_text
+target = {+esc_tolik_task_habar_have} esc_tolik, esc_stalker_habar
+condlist_0 =  {+esc_tolik_task_end} complete
+condlist_1 =  {+esc_tolik_killed} fail
+
+[esc_storyline_task_1]
+icon = ui_inGame2_PD_Sisshik
+prior = 100
+storyline = true
+title = {+esc_sidor_note_have} esc_storyline_task_1_sidor_note_have_name, {+esc_sidor_note_rashifrovana} esc_sl_sidor_note_rash_name, esc_storyline_task_1_name
+descr = {+esc_sidor_note_have} esc_storyline_task_1_sidor_note_have_text, {+esc_sidor_note_rashifrovana} esc_sl_sidor_note_rash_text, esc_storyline_task_1_text
+target = {+esc_sidor_note_have} esc_razlom, {+esc_sidor_note_rashifrovana} predbannik_trader, nil
+condlist_0 =  {+esc_sidor_finded} complete

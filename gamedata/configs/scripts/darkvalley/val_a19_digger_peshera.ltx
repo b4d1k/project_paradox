@@ -1,0 +1,84 @@
+;---Командир
+[logic@val_a19_digger_komand]
+suitable = {=check_npc_name(val_a19_digger_komand)} true
+prior = 200
+active = animpoint@val_a19_digger_komand
+
+[animpoint@val_a19_digger_komand]
+cover_name = val_a19_digger_komand_cover
+avail_animations = animpoint_sit_normal_weapon
+reach_movement = sprint
+meet = meet@val_a19_digger_komand
+
+
+[meet@val_a19_digger_komand]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_digger_peshera========
+[meet@peshera_digger]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@val_a19_digger_1]
+suitable = {=check_npc_name(val_a19_digger_1)}
+prior = 200
+active = animpoint@val_a19_digger_1
+
+[animpoint@val_a19_digger_1]
+cover_name = val_a19_digger_cover
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@val_a19_digger_1
+
+[meet@val_a19_digger_1]:meet@peshera_digger
+
+
+
+[logic@val_a19_digger_2]
+suitable = {=check_npc_name(val_a19_digger_2)}
+prior = 200
+active = animpoint@val_a19_digger_2
+
+[animpoint@val_a19_digger_2]
+cover_name = val_a19_digger_cover_1
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = meet@val_a19_digger_2
+
+[meet@val_a19_digger_2]:meet@peshera_digger
+
+
+
+[logic@val_a19_digger_3]
+suitable = {=check_npc_name(val_a19_digger_3)}
+prior = 200
+active = walker@val_a19_digger_3
+
+[walker@val_a19_digger_3]
+path_walk = digger_1_walk
+path_look = digger_1_look
+def_state_moving = patrol
+use_camp = false
+meet = meet@val_a19_digger_3
+
+[meet@val_a19_digger_3]:meet@peshera_digger

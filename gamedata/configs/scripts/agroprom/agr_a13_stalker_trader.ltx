@@ -1,0 +1,38 @@
+[logic@agr_a13_stalker_trader]
+active = walker@agr_a13_stalker_trader
+suitable = {=check_npc_name(agr_a13_stalker_trader)}
+prior = 200
+trade = misc\trade\trade_jup_b202_stalker_barmen.ltx
+can_select_weapon = false
+level_spot = trader
+
+
+[walker@agr_a13_stalker_trader]
+path_walk = stalker_trader_walk
+path_look = stalker_trader_look
+def_state_standing = ward
+meet = meet@agr_a13_stalker_trader
+use_camp = false
+reach_distance = 1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+
+[meet@agr_a13_stalker_trader]
+close_snd_hello = jup_a6_stalker_barmen_greeting
+close_snd_bye 	= jup_a6_stalker_barmen_farewell
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false

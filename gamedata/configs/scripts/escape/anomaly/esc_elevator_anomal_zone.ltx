@@ -1,0 +1,38 @@
+[anomal_zone]
+layers_count = 2
+respawn_tries = 2
+max_artefacts = 1
+;applying_force_xz = 200
+;applying_force_y = 400 
+artefacts = af_medusa, af_vyvert
+start_artefact = af_medusa
+coeff = 3, 3, 2, 1
+artefact_ways = esc_elevator_af_way
+field_name = level_prefix_zone_field_radioactive_strong_0028
+
+
+[mines_core]
+
+
+[layer_1]
+mines_section = mines_layer_1 
+
+[mines_layer_1]:mines_core
+level_prefix_zone_mine_gravitational_average_0015
+level_prefix_zone_mine_gravitational_average_0016
+level_prefix_zone_mine_gravitational_average_0018
+level_prefix_zone_mine_gravitational_average_0019
+level_prefix_zone_mine_gravitational_average_0023
+level_prefix_zone_mine_gravitational_average_0026
+level_prefix_zone_mine_gravitational_average_0027
+
+
+[layer_2]
+mines_section = mines_layer_2 
+
+[mines_layer_2]:mines_core
+level_prefix_zone_mine_gravitational_average_0020
+level_prefix_zone_mine_gravitational_average_0021
+level_prefix_zone_mine_gravitational_average_0022
+level_prefix_zone_mine_gravitational_average_0024
+level_prefix_zone_mine_gravitational_average_0025

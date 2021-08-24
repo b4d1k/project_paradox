@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="esc_storyline_task_1_name">
+		<text>Сыщик: Осмотреть местность</text>
+	</string>
+	<string id="esc_storyline_task_1_text">
+		<text>Мне нужно было отнести артефакт Сидоровичу. Уже давно стало известно об его уходе. Нужно найти то, что хоть на шаг приведёт меня к Сидоровичу. Искать нужно в районе Деревни Новичков.</text>
+	</string>
+	<string id="esc_storyline_task_1_sidor_note_have_name">
+		<text>Сыщик: Отнести записку Разлому</text>
+	</string>
+	<string id="esc_storyline_task_1_sidor_note_have_text">
+		<text>Кажется, мне удалось найти записку от Сидоровича. Однако она уже лежит давно, и разобрать её очень трудно. Нужно отнести её Разлому. Наверняка он сможет разобрать записку, или по крайней мере подскажет, кто сможет это сделать.</text>
+	</string>
+	<string id="esc_tolik_task_name">
+		<text>Просьба Толика: Взять забар</text>
+	</string>
+	<string id="esc_tolik_task_text">
+		<text>Толик попросил меня взять хабар у одного сталкера. Это поможет ему расширить ассортимент. Если я сделаю это, то получу щедрое вознаграждение.</text>
+	</string>
+	<string id="esc_tolik_task_habar_have_name">
+		<text>Просьба Толика: Отдать хабар</text>
+	</string>
+	<string id="esc_tolik_task_habar_have_text">
+		<text>Мне удалось забрать хабар у сталкера. Теперь нужно отнести его Толику. Он даст мне щедрое вознаграждение.</text>
+	</string>
+
+</string_table>

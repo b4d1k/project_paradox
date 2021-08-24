@@ -1,0 +1,55 @@
+[logic@gar_b303_bandit_1]
+suitable = {=check_npc_name(gar_b303_bandit_1)}
+prior = 200
+active = walker@gar_b303_bandit_1
+
+[walker@gar_b303_bandit_1]
+path_walk = bandit_hunt_walk
+path_look = bandit_hunt_look
+def_state_standing = probe_stand
+def_state_moving = patrol
+meet = meet@gar_b303_bandit_1
+
+
+[meet@gar_b303_bandit_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+[logic@gar_b303_bandit_2]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@gar_b303_bandit_2
+
+[walker@gar_b303_bandit_2]
+path_walk = bandit_hunt_1_walk
+path_look = bandit_hunt_1_look
+def_state_standing = probe_stand
+def_state_moving = patrol
+meet = meet@gar_b303_bandit_2
+
+
+[meet@gar_b303_bandit_2]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false

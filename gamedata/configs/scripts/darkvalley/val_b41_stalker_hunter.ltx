@@ -1,0 +1,34 @@
+[logic@val_b41_stalker_hunter]
+active = walker@near_anomaly
+suitable = {=check_npc_name(val_b41_stalker_hunter)}
+prior = 200
+
+[walker@near_anomaly]
+path_walk = stalker_hunter_walk
+path_look = stalker_hunter_look
+def_state_moving = patrol
+meet = meet@val_b41_stalker_hunter
+on_info = {!is_day} | animpoint@stalker_hunter
+
+[animpoint@stalker_hunter]
+cover_name = val_b41_stalker_hunter_cover
+avail_animations = animpoint_sit_knee
+meet = meet@val_b41_stalker_hunter
+on_info = {=is_day} | walker@near_anomaly
+
+
+[meet@val_b41_stalker_hunter]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+

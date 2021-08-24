@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<game_information_portions>
+
+	<info_portion id="esc_razlom_dialog_end"></info_portion>
+	<info_portion id="esc_tolik_task_started"></info_portion>
+	<info_portion id="esc_sidor_note_have"></info_portion>
+	<info_portion id="esc_sidor_note_rashifrovana"></info_portion>
+	<info_portion id="esc_sidor_finded"></info_portion>
+	<info_portion id="esc_tolik_task_habar_have"></info_portion>
+	<info_portion id="esc_tolik_task_habar_have_peaceful"></info_portion>
+	<info_portion id="esc_tolik_task_end"></info_portion>
+
+</game_information_portions>

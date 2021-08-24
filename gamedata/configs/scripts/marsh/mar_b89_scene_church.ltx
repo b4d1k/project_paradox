@@ -1,0 +1,159 @@
+-----------------ÊÓÐÜÅÐ---------------------
+[logic@mar_b89_stalker_courier]
+suitable = {=check_npc_name(mar_b89_stalker_courier)} true
+prior = 150
+active = smartcover@hide
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide]
+path_walk = stalker_walk
+cover_name = mar_b89_stalker_cover
+on_timer = 15000 | camper@fire
+;combat_ignore_cond = true
+invulnerable = true
+
+;-- סענוכÿוע
+
+[camper@fire]
+path_walk = stalker_walk
+path_look = stalker_look
+def_state_campering_fire = threat_fire
+on_timer = 10000 | smartcover@hide
+invulnerable = true
+
+
+-----------------ÐÅÍÅÃÀÒ 1---------------------
+[logic@mar_b89_renegade_1]
+suitable = {=check_npc_name(mar_b89_renegade_1)} true
+prior = 150
+active = smartcover@hide_renegade_1
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_renegade_1]
+path_walk = renegade_walk
+cover_name = mar_b89_renegade_cover
+on_timer = 5 | camper@fire_renegade_1
+;invulnerable = true
+
+;-- סענוכÿוע
+
+[camper@fire_renegade_1]
+path_walk = renegade_walk
+path_look = renegade_look
+def_state_campering_fire = threat_fire
+on_timer = 10000 | smartcover@hide_1_renegade_1
+;invulnerable = true
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_1_renegade_1]
+cover_name = mar_b89_renegade_cover
+on_timer = 15000 | smartcover@hide_renegade_1
+combat_ignore_cond = {=check_enemy_name(mar_b89_stalker_courier)} true
+;invulnerable = true
+
+
+-----------------ÐÅÍÅÃÀÒ 2---------------------
+[logic@mar_b89_renegade_2]
+suitable = {=check_npc_name(mar_b89_renegade_2)} true
+prior = 150
+active = smartcover@hide_renegade_2
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_renegade_2]
+path_walk = renegade_1_walk
+cover_name = mar_b89_renegade_cover_1
+on_timer = 5 | camper@fire_renegade_2
+;invulnerable = true
+
+;-- סענוכÿוע
+
+[camper@fire_renegade_2]
+path_walk = renegade_1_walk
+path_look = renegade_look
+def_state_campering_fire = threat_fire
+on_timer = 10000 | smartcover@hide_1_renegade_2
+;invulnerable = true
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_1_renegade_2]
+cover_name = mar_b89_renegade_cover_1
+on_timer = 15000 | smartcover@hide_renegade_2
+combat_ignore_cond = {=check_enemy_name(mar_b89_stalker_courier)} true
+;invulnerable = true
+
+
+-----------------ÐÅÍÅÃÀÒ 3---------------------
+[logic@mar_b89_renegade_3]
+suitable = {=check_npc_name(mar_b89_renegade_3)} true
+prior = 150
+active = smartcover@hide_renegade_3
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_renegade_3]
+path_walk = renegade_2_walk
+cover_name = mar_b89_renegade_cover_2
+on_timer = 5 | camper@fire_renegade_3
+;invulnerable = true
+
+;-- סענוכÿוע
+
+[camper@fire_renegade_3]
+path_walk = renegade_2_walk
+path_look = renegade_look
+def_state_campering_fire = threat_fire
+on_timer = 10000 | smartcover@hide_1_renegade_3
+;invulnerable = true
+
+;-- ןנÿקועסÿ
+
+[smartcover@hide_1_renegade_3]
+cover_name = mar_b89_renegade_cover_2
+on_timer = 15000 | smartcover@hide_renegade_3
+combat_ignore_cond = {=check_enemy_name(mar_b89_stalker_courier)} true
+;invulnerable = true
+
+
+-----------------ÐÅÍÅÃÀÒ 4---------------------
+[logic@mar_b89_renegade_4]
+suitable = {=check_npc_name(mar_b89_renegade_4)} true
+prior = 150
+active = smartcover@hide_renegade_4
+
+;-- כוזא סענוכÿוע
+
+[smartcover@hide_renegade_4]
+path_walk = renegade_3_walk
+target_path = renegade_look
+cover_name = mar_b89_renegade_cover_3
+cover_state = fire_target
+;invulnerable = true
+cover_attack = true
+
+
+---------------Ìונעגûו נוםודאעû-----------------
+[logic@mar_b89_renegade_dead_1]
+suitable = {=check_npc_name(mar_b89_renegade_dead_1)} true
+prior = 200
+active = remark@mar_b89_renegade_dead_1
+
+[remark@mar_b89_renegade_dead_1]
+anim = wait
+path_walk = renegade_dead_1
+on_info = %=kill_npc%
+
+
+[logic@mar_b89_renegade_dead_2]
+suitable = {=check_npc_name(mar_b89_renegade_dead_2)} true
+prior = 200
+active = remark@mar_b89_renegade_dead_2
+
+[remark@mar_b89_renegade_dead_2]
+anim = wait
+path_walk = renegade_dead_2
+on_info = %=kill_npc%

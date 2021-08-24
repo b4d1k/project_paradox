@@ -1,0 +1,191 @@
+; Ручной противотанковый гранатомёт РПГ-7 (6Г1)
+;-(TrickSR)-----------------------------------------
+; калибр 							40 мм
+; длина 							950 мм
+; вес без гранаты					6.3
+; максимальная дальность стрельбы	1400 м
+; дальность прямого выстрела 		500 м
+; прицельная дальность				330 м
+; начальная скорость гранаты		112 м/с (ПГ-7ВЛ «Луч»)
+; начальная скорость гранаты		145-152 м/с (ОГ-7В «Карандаш» или «Осколок»)
+; темп стрельбы						---
+; ресурс живучести					250-300 выстрелов
+;---------------------------------------------------
+
+[wpn_rpg7]:weapon_probability,default_weapon_params,wpn_rpg7_sounds		;-->> ,zero_immunities
+GroupControlSection					= spawn_group
+discovery_dependency 				=
+$spawn								= "weapons\rpg-7"		; option for Level Editor
+$prefetch 		 					= 8
+scheduled							= off					; option for ALife Simulator
+cform								= skeleton
+class								= WP_RPG7
+description							= st_wpn_rpg7_descr
+
+ef_main_weapon_type					= 4
+ef_weapon_type						= 12
+
+sprint_allowed						= true
+
+;------------------------------------------------------------------------------
+inv_name							= st_wpn_rpg7
+inv_name_short						= st_wpn_rpg7
+
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 26
+inv_grid_y         = 10
+
+upgr_icon_x 						= 1475
+upgr_icon_y 						= 450
+upgr_icon_width 					= 300
+upgr_icon_height 					= 125
+
+kill_msg_x							= 0
+kill_msg_y							= 85
+kill_msg_width						= 73
+kill_msg_height						= 19
+
+;------------------------------------------------------------------------------
+cost								= 26000
+weapon_class						= heavy_weapon
+inv_weight							= 6.3
+hud									= wpn_rpg7_hud
+visual 								= dynamics\weapons\wpn_rpg7\wpn_rpg7
+
+ph_mass			 					= 6
+
+;------------------------------------------------------------------------------
+ammo_class		 					= ammo_og-7b
+
+ammo_current		 				= 6
+ammo_elapsed		 				= 1
+ammo_limit		 					= 7
+ammo_mag_size					 	= 1
+
+auto_spawn_ammo						= false
+
+rocket_class						= wpn_rpg7_missile
+launch_speed						= 5
+
+hand_dependence					 	= 1
+single_handed						= 0
+
+;-TTX---------------------------------------------------------------------------
+hit_power 							= 0.80, 0.80, 0.80, 0.80
+;hit_impulse						= 10
+hit_type 							= explosion
+fire_distance						= 1400
+bullet_speed						= 150					; начальная скорость пули
+rpm									= 200
+
+misfire_probability					= 0.005					; вероятность осечки при максимальном износе!!!old - now not working
+misfire_start_condition				= 0.6					; изношенность, при которой появляется шанс осечки
+misfire_end_condition				= 0.1					; изношеность при которой шанс осечки становится константным
+misfire_start_prob	 				= 0.001					; шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob	 				= 0.02					; шанс осечки при изношености больше чем misfireEndCondition
+condition_shot_dec					= 0.0033				; увеличение изношености при одиночном выстреле
+condition_queue_shot_dec			= 0.0040				; увеличение изношености при выстреле очередью
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof							= 0.5, 1.0, 180
+reload_dof							= 0.0, 0.5, 5, 1.7
+
+;-дисперсия---------------------------------------------------------------------
+fire_dispersion_base				= 0.1					; угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_condition_factor 	= 5						; увеличение дисперсии в процентах при максимальном износе
+crosshair_inertion 					= 10
+
+;-отдача------------------------------------------------------------------------
+cam_relax_speed						= 2.0					; скорость возврата в исходное положение
+cam_relax_speed_ai					= 360
+cam_dispersion						= 10.0					; увеличения угла (в градусах) с каждым выстрелом
+cam_max_angle						= 15					; максимальный угол отдачи
+cam_max_angle_horz					= 15					; (degree) maximum shot horizontal degree
+cam_step_angle_horz					= 0.5					; (degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base						= 1.0
+PDM_disp_vel_factor					= 1.0
+PDM_disp_accel_factor				= 1.0
+PDM_disp_crouch						= 1.0
+PDM_disp_crouch_no_acc				= 1.0
+
+;- for AI ----------------------------------------------------------------------
+min_radius 							= 20
+max_radius 							= 90
+
+holder_range_modifier 				= 2.00					; во сколько раз увеличивается eye_range
+holder_fov_modifier					= 1.00					; во сколько раз увеличивается eye_fov
+
+;-------------------------------------------------------------------------------
+slot 				 				= 2
+animation_slot		 				= 4						; type of the animation that will be used
+
+position							= -0.027, -0.113, 0.0
+orientation							= 0, 0, 0
+
+smoke_particles		 				= weapons\generic_weapon02	;generic_rpg_shot
+
+shell_point							= 0.0, 0.0, 0.0
+fire_point							= 0.0, 0.162, 0.35
+
+;-STRAP PARAMETERS--------------------------------------------------------------
+;нв плече, зарядом в верх
+strap_position 						= -0.28,-0.20,0.25			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation					= -15,-189,110				; (3rd person view in degrees)
+strap_bone0							= bip01_spine2
+strap_bone1							= bip01_spine1
+
+light_color		 					= 0.95,0.95,0.3
+light_range		 					= 20.0
+light_var_color		 				= 0.05
+light_var_range		 				= 0.5
+light_time 		 					= 0.75
+
+;-addons------------------------------------------------------------------------
+scope_status						= 0
+silencer_status						= 0
+grenade_launcher_status				= 0
+
+zoom_enabled						= true
+scope_zoom_factor = 60
+max_zoom_factor						= 5
+
+scope_texture						= wpn_crosshair_rpg
+
+[wpn_rpg7_hud]:hud_base
+zoom_hide_crosshair        	= true
+attach_place_idx			= 0
+item_visual                 = dynamics\weapons\wpn_rpg7\wpn_rpg7_hud
+
+fire_point					= -0.020000, 0.05, 0.23
+fire_bone               	= muzzle
+
+hands_position				= 0.020500,-0.165999,0.209500
+hands_orientation			= 3.649998,1.050001,-0.050000
+hands_position_16x9			= 0.020500,-0.165999,0.209500
+hands_orientation_16x9		= 3.649998,1.050001,-0.050000
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos 			= -0.184,-0.0435,-0.01
+aim_hud_offset_rot 			= -0.0155,0.064,0.0
+aim_hud_offset_pos_16x9 	= -0.184,-0.0435,-0.01
+aim_hud_offset_rot_16x9 	= -0.0155,0.064,0.0
+
+gl_hud_offset_pos					= 0,0,0
+gl_hud_offset_rot					= 0,0,0
+
+lean_hud_offset_pos				= 0,0,0
+lean_hud_offset_rot				= 0,0,0
+
+anm_show					= rpg7_draw
+anm_hide					= rpg7_holster
+anm_reload					= rpg7_reload, reload
+anm_shots					= rpg7_shoot, shoot
+anm_idle					= rpg7_idle
+anm_idle_sprint				= rpg7_idle_sprint
+anm_idle_aim				= rpg7_idle_aim
+anm_idle_moving				= rpg7_idle_moving
+anm_bore					= rpg7_idle_aim

@@ -1,0 +1,35 @@
+[logic@esc_underground_stalker_barmen]
+suitable = {=check_npc_name(esc_underground_bar_barmen)} true
+trade = misc\trade\trade_zat_a2_barmen.ltx
+prior = 200
+active = animpoint@bar
+can_select_weapon = false
+
+[animpoint@bar]
+cover_name = esc_underground_bar_barmen_cover
+avail_animations = animpoint_stay_table_no_rnd
+use_camp = false
+meet = meet
+out_restr = esc_underground_bar_restrictor
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+meet_on_talking = false
+
+

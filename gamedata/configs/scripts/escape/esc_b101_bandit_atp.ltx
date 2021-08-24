@@ -1,0 +1,51 @@
+[logic@esc_b101_bandit_2]
+suitable = {=check_npc_name(esc_b101_bandit_2)}
+prior = 200
+active = walker@esc_b101_bandit_2
+
+[walker@esc_b101_bandit_2]
+path_walk = bandit_1_walk
+;path_look = bandit_1_look
+def_state_standing = sleep
+meet = no_meet
+
+
+
+
+[logic@esc_b101_bandit_3]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@esc_b101_bandit_3
+
+[walker@esc_b101_bandit_3]
+path_walk = bandit_2_walk
+;path_look = bandit_2_look
+def_state_moving = patrol
+meet = meet@esc_b101_bandit_3
+
+[meet@esc_b101_bandit_3]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+[logic@esc_b101_bandit_4]
+suitable = {=npc_community(bandit)} true
+prior = 200
+active = walker@esc_b101_bandit_4
+
+[walker@esc_b101_bandit_4]
+path_walk = bandit_3_walk
+;path_look = bandit_3_look
+def_state_moving = patrol
+meet = no_meet

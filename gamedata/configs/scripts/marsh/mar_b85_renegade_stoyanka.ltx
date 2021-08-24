@@ -1,0 +1,20 @@
+[logic@mar_b85_renegade_1]
+suitable = {=check_npc_name(mar_b85_renegade_1)}
+prior = 200
+active = animpoint@mar_b85_renegade_1
+
+[animpoint@mar_b85_renegade_1]
+cover_name = mar_b85_renegade_cover_1
+avail_animations = animpoint_sit_ass
+
+
+
+[logic@mar_b85_renegade_2]
+suitable = {=check_npc_name(mar_b85_renegade_2)}
+prior = 200
+active = walker@mar_b85_renegade_2
+
+[walker@mar_b85_renegade_2]
+path_walk = renegade_1_walk
+path_look = renegade_1_look
+def_state_moving = patrol

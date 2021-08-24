@@ -1,0 +1,668 @@
+;-------------------------------------------------------------------------------
+;  Mod: TrickSR
+; Base: default
+;-------------------------------------------------------------------------------
+;sounds (name of the sound, volume (0.0 - 1.0), delay (sec))
+
+[base_sounds]
+snd_close							= weapons\generic_close
+snd_bore							= weapons\draw_silent
+snd_bore1							= weapons\draw_silent
+
+[wpn_abakan_sounds]:base_sounds
+snd_draw                	= weapons\rifle_draw
+snd_holster             	= weapons\rifle_holster
+snd_shoot               	= weapons\abakan\abakan_shoot
+snd_shoot1               	= weapons\abakan\abakan_shoot1
+snd_shoot2               	= weapons\abakan\abakan_shoot2
+snd_shoot3               	= weapons\abakan\abakan_shoot3
+snd_shoot4               	= weapons\abakan\abakan_shoot4
+snd_empty               	= weapons\ak_empty
+snd_reload              	= weapons\abakan\abakan_reload
+snd_reload_empty            = weapons\abakan\abakan_reload_empty
+snd_shoot_grenade       	= weapons\gp25_grenshoot
+snd_reload_grenade      	= weapons\gp25_grenload
+snd_switch              	= weapons\draw_silent
+snd_bore					= weapons\draw_silent
+snd_silncer_shot        	= weapons\ak_shoot_sil				0.7
+
+[wpn_ak74_sounds]:base_sounds
+snd_draw                	= weapons\rifle_draw
+snd_holster             	= weapons\rifle_holster
+snd_shoot               	= weapons\ak74\ak74_shoot
+snd_shoot1               	= weapons\ak74\ak74_shoot1
+snd_shoot2               	= weapons\ak74\ak74_shoot2
+snd_shoot3               	= weapons\ak74\ak74_shoot3
+snd_shoot4               	= weapons\ak74\ak74_shoot4
+snd_empty               	= weapons\ak_empty
+snd_reload              	= weapons\ak74\ak74_reload
+snd_reload_empty            = weapons\ak74\ak74_reload_empty
+snd_shoot_grenade       	= weapons\gp25_grenshoot
+snd_reload_grenade      	= weapons\gp25_grenload
+snd_switch              	= weapons\draw_silent
+snd_bore					= weapons\draw_silent
+snd_silncer_shot        = weapons\ak_shoot_sil
+
+[wpn_ak74u_sounds]:base_sounds
+snd_draw                	= weapons\rifle_draw
+snd_holster             	= weapons\rifle_holster
+snd_shoot               	= weapons\ak74u\aks74u_shoot
+snd_shoot1               	= weapons\ak74u\aks74u_shoot1
+snd_shoot2               	= weapons\ak74u\aks74u_shoot2
+snd_shoot3               	= weapons\ak74u\aks74u_shoot3
+snd_shoot4               	= weapons\ak74u\aks74u_shoot4
+snd_empty               	= weapons\ak_empty
+snd_reload              	= weapons\ak74u\aks74u_reload
+snd_reload_empty            = weapons\ak74u\aks74u_reload_empty
+snd_shoot_grenade       	= weapons\gp25_grenshoot
+snd_reload_grenade      	= weapons\gp25_grenload
+snd_switch              	= weapons\draw_silent
+snd_bore					= weapons\draw_silent
+snd_silncer_shot        	= weapons\ak_shoot_sil
+
+[wpn_beretta_sounds]:base_sounds
+snd_draw						= weapons\beretta\beretta_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\beretta\beretta_shoot
+snd_shoot1						= weapons\beretta\beretta_shoot1
+snd_silncer_shot				= weapons\beretta\beretta_shoot_sil
+snd_empty						= weapons\beretta\beretta_empty
+snd_reload						= weapons\beretta\beretta_reload
+snd_reload_empty				= weapons\beretta\beretta_reload_empty
+snd_shoot_grenade       		= weapons\gen_grenshoot
+snd_reload_grenade      		= weapons\gen_grenload, 1.0, 0.8
+snd_switch              		= weapons\groza_switch, 1.0, 0.5
+snd_bore						= weapons\draw_silent
+snd_bore1						= weapons\draw_silent
+
+[wpn_binoc_sounds]:base_sounds
+snd_draw					= weapons\bino_draw
+snd_holster					= weapons\bino_holster
+snd_gyro					= weapons\binoculars_gyro
+snd_zoomin					= weapons\binoculars_zoomin
+snd_zoomout					= weapons\binoculars_zoomout
+snd_shoot					= weapons\n_pb_shot
+snd_empty					= weapons\pistol_empty
+snd_reload					= weapons\pm_reload, 0.8
+snd_close					= weapons\generic_close
+
+found_snd					= weapons\draw_silent
+catch_snd					= weapons\draw_silent
+
+[wpn_bm16_sounds]:base_sounds
+snd_draw				        = weapons\generic_draw
+snd_holster			            = weapons\generic_holster
+snd_shoot			            = weapons\bm16\bm16_shoot
+snd_empty			            = weapons\generic_empty
+snd_reload			            = weapons\bm16\bm16_reload_lr		;reload both
+snd_shoot_duplet				= weapons\bm16\bm16_shoot
+snd_shoot_1			            = weapons\bm16\bm16_shoot
+snd_reload_1		            = weapons\bm16\bm16_reload_l		;reload left
+
+[wpn_colt1911_sounds]:base_sounds
+snd_draw						= weapons\colt\colt_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\colt\colt_shoot
+snd_shoot1						= weapons\colt\colt_shoot1
+snd_silncer_shot				= weapons\colt\colt_shoot_sil
+snd_empty						= weapons\colt\colt_empty
+snd_reload						= weapons\colt\colt_reload
+snd_reload_empty				= weapons\colt\colt_reload_empty
+snd_shoot_grenade       		= weapons\gen_grenshoot
+snd_reload_grenade      		= weapons\gen_grenload, 1.0, 0.8
+snd_switch              		= weapons\groza_switch, 1.0, 0.5
+snd_bore						= weapons\draw_silent
+snd_bore1						= weapons\draw_silent
+
+[wpn_desert_eagle_sounds]:base_sounds
+snd_draw						= weapons\deagle\deagle_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\deagle\deagle_shoot
+snd_shoot1						= weapons\deagle\deagle_shoot1
+snd_silncer_shot				= weapons\deagle\deagle_shoot_sil
+snd_empty						= weapons\deagle\deagle_empty
+snd_reload						= weapons\deagle\deagle_reload
+snd_reload_empty				= weapons\deagle\deagle_reload_empty
+snd_shoot_grenade       		= weapons\gen_grenshoot
+snd_reload_grenade      		= weapons\gen_grenload, 1.0, 0.8
+snd_switch              		= weapons\groza_switch, 1.0, 0.5
+snd_bore						= weapons\draw_silent
+snd_bore1						= weapons\draw_silent
+
+[grenade_f1_sounds]:base_sounds
+snd_explode							= weapons\f1_explode							; t_f1_explosion	; f1_explode
+snd_checkout						= weapons\generic_checkout, 		1.0, 0.4
+
+[wpn_fn2000_sounds]:base_sounds
+snd_draw                	= weapons\rifle_draw
+snd_holster             	= weapons\rifle_holster
+snd_shoot               	= weapons\aug\aug_shoot
+snd_shoot1               	= weapons\aug\aug_shoot1
+snd_shoot2               	= weapons\aug\aug_shoot2
+snd_shoot3               	= weapons\aug\aug_shoot3
+snd_shoot4               	= weapons\aug\aug_shoot4
+snd_silncer_shot        = weapons\aug\aug_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload        		= weapons\aug\aug_reload
+snd_reload_empty		= weapons\aug\aug_reload_empty
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\fn2000\fn2000_grenload, 1.0
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+
+[wpn_fn2000_nimble_sounds]:wpn_fn2000_sounds
+snd_shoot               	= weapons\fn2000\fn2000_shoot
+snd_shoot1               	= weapons\fn2000\fn2000_shoot1
+snd_shoot2               	= weapons\fn2000\fn2000_shoot2
+snd_shoot3               	= weapons\fn2000\fn2000_shoot3
+snd_shoot4               	= weapons\fn2000\fn2000_shoot
+snd_reload        		= weapons\fn2000\fn2000_reload
+snd_reload_empty		= weapons\fn2000\fn2000_reload_empty
+snd_shoot_grenade       = weapons\m203_grenshoot
+snd_reload_grenade      = weapons\fn2000\fn2000_grenload
+snd_switch              = weapons\fn2000\fn2000_switch
+snd_silncer_shot        = weapons\fn2000\fn2000_shot_sil
+
+[wpn_fort_sounds]:base_sounds
+snd_draw						= weapons\fort\fort_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\fort\fort_shoot
+snd_shoot1						= weapons\fort\fort_shoot1
+snd_silncer_shot				= weapons\fort\fort_shoot_sil
+snd_empty						= weapons\fort\fort_empty
+snd_reload						= weapons\fort\fort_reload
+snd_reload_empty				= weapons\fort\fort_reload_empty
+snd_close						= weapons\generic_close
+
+[wpn_g36_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot               = weapons\g36\g36_shoot
+snd_shoot1              = weapons\g36\g36_shoot1
+snd_shoot2              = weapons\g36\g36_shoot2
+snd_shoot3              = weapons\g36\g36_shoot3
+snd_shoot4              = weapons\g36\g36_shoot4
+snd_silncer_shot        = weapons\g36\g36_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload              = weapons\g36\g36_reload
+snd_reload_empty        = weapons\g36\g36_reload_empty
+snd_shoot_grenade       = weapons\m203_grenshoot
+snd_reload_grenade      = weapons\m203_grenload
+snd_switch              = weapons\m203_switch
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_g36_nimble_sounds]:wpn_g36_sounds
+snd_shoot               = weapons\xm8\xm8_shoot
+snd_shoot1              = weapons\xm8\xm8_shoot1
+snd_shoot2              = weapons\xm8\xm8_shoot2
+snd_shoot3              = weapons\xm8\xm8_shoot3
+snd_shoot4              = weapons\xm8\xm8_shoot4
+snd_reload              = weapons\xm8\xm8_reload
+snd_reload_empty        = weapons\xm8\xm8_reload_empty
+snd_silncer_shot        = weapons\xm8\xm8_shoot_sil
+
+[wpn_gauss_sounds]:base_sounds
+snd_draw			  		= weapons\rifle_draw
+snd_holster					= weapons\rifle_holster
+snd_shoot					= weapons\gauss_shoot
+snd_empty					= weapons\gen_empty, 0.5
+snd_reload					= weapons\gauss_reload
+snd_reload_empty			= weapons\gauss_reload
+snd_close					= weapons\generic_close
+snd_bore					= weapons\draw_silent
+snd_bore1					= weapons\draw_silent
+
+[grenade_gd-05_sounds]:base_sounds
+snd_explode							= weapons\grenade_gd05
+snd_checkout						= weapons\generic_checkout, 		1.0, 0.4
+
+[wpn_groza_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot				= weapons\groza\groza_shoot
+snd_shoot1				= weapons\groza\groza_shoot1
+snd_shoot2				= weapons\groza\groza_shoot2
+snd_shoot3				= weapons\groza\groza_shoot3
+snd_shoot4				= weapons\groza\groza_shoot4
+snd_silncer_shot        = weapons\groza\groza_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload              = weapons\groza\groza_reload
+snd_reload_empty        = weapons\groza\groza_reload_empty
+snd_shoot_grenade       = weapons\gp25_grenshoot
+snd_reload_grenade      = weapons\groza\groza_grenload
+snd_switch              = weapons\groza\groza_switch
+snd_bore				= weapons\draw_silent
+
+[wpn_groza_nimble_sounds]:wpn_groza_sounds
+snd_shoot				= weapons\groza\groza_n_shoot
+snd_shoot1				= weapons\groza\groza_n_shoot1
+snd_shoot2				= weapons\groza\groza_n_shoot2
+snd_shoot3				= weapons\groza\groza_n_shoot3
+snd_shoot4				= weapons\groza\groza_n_shoot4
+snd_silncer_shot        = weapons\ak_shoot_sil
+snd_reload              = weapons\groza\groza_n_reload
+snd_reload_empty        = weapons\groza\groza_n_reload_empty
+snd_switch              = weapons\groza\groza_n_switch
+
+[wpn_hpsa_sounds]:base_sounds
+snd_draw						= weapons\hpsa\hpsa_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\hpsa\hpsa_shoot
+snd_shoot1						= weapons\hpsa\hpsa_shoot1
+snd_shoot2						= weapons\hpsa\hpsa_shoot2
+snd_shoot3						= weapons\hpsa\hpsa_shoot3
+snd_shoot4						= weapons\hpsa\hpsa_shoot4
+snd_silncer_shot				= weapons\hpsa\hpsa_shoot_sil
+snd_empty						= weapons\hpsa\hpsa_empty
+snd_reload						= weapons\hpsa\hpsa_reload
+snd_reload_empty				= weapons\hpsa\hpsa_reload_empty
+snd_close						= weapons\generic_close
+
+[wpn_knife_sounds]:base_sounds
+snd_draw							= weapons\walther_draw
+snd_holster							= weapons\generic_holster
+snd_shoot							= weapons\knife_1
+snd_shoot1							= weapons\knife_1
+snd_shoot2							= weapons\knife_1
+snd_empty							= weapons\pistol_empty
+snd_reload							= weapons\pm_reload,				0.8
+
+[wpn_l85_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot				= weapons\l85\l85_shoot
+snd_shoot1				= weapons\l85\l85_shoot1
+snd_shoot2				= weapons\l85\l85_shoot2
+snd_shoot3				= weapons\l85\l85_shoot3
+snd_shoot4				= weapons\l85\l85_shoot4
+snd_silncer_shot        = weapons\l85\l85_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload				= weapons\l85\l85_reload
+snd_reload_empty		= weapons\l85\l85_reload_empty
+snd_shoot_grenade		= weapons\gen_grenshoot
+snd_reload_grenade		= weapons\l85_grenload
+snd_switch				= weapons\groza_switch, 1.0, 0.5
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_lr300_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot               = weapons\lr300\lr300_shoot
+snd_shoot1              = weapons\lr300\lr300_shoot1
+snd_shoot2              = weapons\lr300\lr300_shoot2
+snd_shoot3              = weapons\lr300\lr300_shoot3
+snd_shoot4              = weapons\lr300\lr300_shoot4
+snd_silncer_shot        = weapons\lr300\lr300_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload              = weapons\lr300\lr300_reload
+snd_reload_empty		= weapons\lr300\lr300_reload_empty
+snd_shoot_grenade       = weapons\m203_grenshoot
+snd_reload_grenade      = weapons\m203_grenload
+snd_switch              = weapons\m203_switch
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[mounted_weapon_sounds]:base_sounds
+snd_shoot							= weapons\pkm_shot
+
+[stationary_mgun_sounds]:base_sounds
+snd_shoot							= weapons\pkm_shot
+
+[wpn_mp5_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot               = weapons\mp5\mp5_shoot
+snd_shoot1              = weapons\mp5\mp5_shoot1
+snd_shoot2              = weapons\mp5\mp5_shoot2
+snd_shoot3              = weapons\mp5\mp5_shoot3
+snd_shoot4              = weapons\mp5\mp5_shoot4
+snd_silncer_shot        = weapons\mp5\mp5_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload              = weapons\mp5\mp5_reload
+snd_reload_empty        = weapons\mp5\mp5_reload_empty
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_mp5_nimble_sounds]:wpn_mp5_sounds
+snd_shoot               = weapons\ump45\ump45_shoot
+snd_shoot1              = weapons\ump45\ump45_shoot1
+snd_shoot2              = weapons\ump45\ump45_shoot2
+snd_shoot3              = weapons\ump45\ump45_shoot3
+snd_shoot4              = weapons\ump45\ump45_shoot4
+snd_silncer_shot        = weapons\ump45\ump45_shoot_sil
+snd_reload              = weapons\ump45\ump45_reload
+snd_reload_empty        = weapons\ump45\ump45_reload_empty
+
+[wpn_pb_sounds]:base_sounds
+snd_draw						= weapons\generic_draw
+snd_holster						= weapons\generic_holster
+snd_shoot						= weapons\pm\pm_shoot_sil
+snd_silncer_shot				= weapons\pm\pm_shoot_sil
+snd_empty						= weapons\pistol_empty
+snd_reload						= weapons\pm\pm_reload
+snd_reload_empty				= weapons\pm\pm_reload_empty
+snd_close						= weapons\generic_close
+
+[wpn_pkm_sounds]:base_sounds
+snd_draw			= weapons\pkm\pkm_draw
+snd_holster         = weapons\rifle_holster
+snd_shoot			= weapons\pkm\pkm_shoot
+snd_shoot1			= weapons\pkm\pkm_shoot1
+snd_shoot2			= weapons\pkm\pkm_shoot2
+snd_shoot3			= weapons\pkm\pkm_shoot3
+snd_empty			= weapons\gen_empty, 0.5
+snd_reload			= weapons\pkm\pkm_reload
+snd_reload_empty	= weapons\pkm\pkm_reload
+snd_switch			= weapons\groza\groza_switch, 1.0, 0.5
+
+[wpn_pm_sounds]:base_sounds
+snd_draw						= weapons\pm\pm_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\pm\pm_shoot
+snd_shoot1						= weapons\pm\pm_shoot1
+snd_silncer_shot				= weapons\pm\pm_shoot_sil
+snd_empty						= weapons\pm\pm_empty
+snd_reload						= weapons\pm\pm_reload
+snd_reload_empty				= weapons\pm\pm_reload_empty
+snd_close						= weapons\generic_close
+
+[wpn_protecta_sounds]:base_sounds
+snd_draw					= weapons\protecta\protecta_draw
+snd_holster					= weapons\shotgun_holster
+snd_shoot					= weapons\protecta\protecta_shot
+snd_shoot1					= weapons\protecta\protecta_shot1
+snd_shoot2					= weapons\protecta\protecta_shot2
+snd_shoot3					= weapons\protecta\protecta_shot3      
+snd_empty					= weapons\protecta\protecta_empty
+snd_reload					= weapons\toz34_reload
+snd_shoot_duplet			= weapons\toz34_shoot_both
+snd_open_weapon				= weapons\draw_silent	
+snd_add_cartridge			= weapons\protecta\protecta_load        
+snd_close_weapon			= weapons\draw_silent
+
+[wpn_protecta_nimble_sounds]:wpn_protecta_sounds
+
+[wpn_rg-6_sounds]:base_sounds
+snd_draw							= weapons\rg6\rg6_draw
+snd_holster							= weapons\generic_holster
+snd_shoot							= weapons\rg6\rg6_shoot
+snd_empty							= weapons\rg6\rg6_empty
+snd_reload							= weapons\rg6\rg6_reload
+snd_shoot_duplet					= weapons\n_toz34_shot
+snd_open_weapon						= weapons\rg6\rg6_reload_start
+snd_add_cartridge					= weapons\rg6\rg6_reload
+snd_close_weapon					= weapons\rg6\rg6_reload_end
+
+[grenade_rgd5_sounds]:base_sounds
+snd_explode							= weapons\t_rgd5_explosion						; t_f1_explosion	; f1_explode
+snd_checkout						= weapons\generic_checkout,			1.0, 0.4
+
+[wpn_rpg7_sounds]:base_sounds
+snd_draw				= weapons\rpg7\rpg7_draw
+snd_holster				= weapons\generic_holster
+snd_silncer_shot		= weapons\draw_silent
+snd_shoot				= weapons\rpg7\rpg7_shoot
+snd_empty				= weapons\rpg7\rpg7_empty
+snd_reload				= weapons\rpg7\rpg7_reload
+snd_shoot_grenade		= weapons\draw_silent
+snd_reload_grenade		= weapons\draw_silent
+snd_switch				= weapons\draw_silent
+snd_bore				= weapons\draw_silent					; t_rpg7_explosion
+
+[wpn_sig220_sounds]:base_sounds
+snd_draw						= weapons\glock\glock_draw
+snd_holster						= weapons\pistol_holster
+snd_shoot						= weapons\glock\glock_shoot
+snd_shoot1						= weapons\glock\glock_shoot1
+snd_shoot2						= weapons\glock\glock_shoot2
+snd_silncer_shot				= weapons\glock\glock_shoot_sil
+snd_empty						= weapons\glock\glock_empty
+snd_reload						= weapons\glock\glock_reload
+snd_reload_empty				= weapons\glock\glock_reload_empty
+snd_close						= weapons\generic_close
+
+[wpn_sig220_nimble_sounds]:wpn_sig220_sounds
+snd_draw						= weapons\p226\p226_draw
+snd_empty						= weapons\p226\p226_empty
+snd_shoot						= weapons\p226\p226_shoot
+snd_shoot1						= weapons\p226\p226_shoot1
+snd_shoot2						= weapons\p226\p226_shoot2
+snd_silncer_shot				= weapons\p226\p226_shoot_sil
+snd_empty						= weapons\pistol_empty
+snd_reload						= weapons\p226\p226_reload
+snd_reload_empty				= weapons\p226\p226_reload_empty
+
+
+[wpn_sig550_sounds]:base_sounds
+snd_draw                = weapons\rifle_draw
+snd_holster             = weapons\rifle_holster
+snd_shoot               = weapons\sg550\sg550_shoot
+snd_shoot1              = weapons\sg550\sg550_shoot1
+snd_shoot2              = weapons\sg550\sg550_shoot2
+snd_shoot3              = weapons\sg550\sg550_shoot3
+snd_shoot4              = weapons\sg550\sg550_shoot4
+snd_shoot5              = weapons\sg550\sg550_shoot5
+snd_silncer_shot        = weapons\sg550\sg550_shoot_sil
+snd_empty               = weapons\gen_empty, 0.5
+snd_reload              = weapons\sg550\sg550_reload
+snd_reload_empty		= weapons\sg550\sg550_reload_empty
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\sg550\sg550_grenload
+snd_switch              = weapons\draw_silent
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_sig550_luckygun_sounds]:wpn_sig550_sounds
+snd_shoot               = weapons\sg550\sg551_shoot
+snd_shoot1              = weapons\sg550\sg551_shoot1
+snd_shoot2              = weapons\sg550\sg551_shoot2
+snd_shoot3              = weapons\sg550\sg551_shoot
+snd_shoot4              = weapons\sg550\sg551_shoot1
+snd_shoot5              = weapons\sg550\sg551_shoot2
+
+[wpn_spas12_sounds]:base_sounds
+snd_draw				= weapons\spas12\spas12_draw
+snd_holster				= weapons\shotgun_holster
+snd_shoot				= weapons\spas12\spas12_shoot
+snd_shoot1				= weapons\spas12\spas12_shoot1
+snd_shoot2				= weapons\spas12\spas12_shoot2
+snd_empty				= weapons\spas12\spas12_empty
+snd_reload				= weapons\spas12\spas12_insertshell
+snd_bore				= weapons\draw_silent
+snd_open_weapon			= weapons\draw_silent
+snd_add_cartridge		= weapons\spas12\spas12_insertshell
+snd_close_weapon		= weapons\spas12\spas12_pump
+
+[wpn_spas12_nimble_sounds]:wpn_spas12_sounds
+snd_draw				= weapons\mp153\mp153_draw
+snd_holster				= weapons\shotgun_holster
+snd_shoot				= weapons\mp153\mp153_shoot
+snd_shoot1				= weapons\mp153\mp153_shoot1
+snd_shoot2				= weapons\mp153\mp153_shoot2
+snd_shoot3				= weapons\mp153\mp153_shoot
+snd_empty				= weapons\gen_empty
+snd_reload				= weapons\mp153\mp153_insertshell
+snd_bore				= weapons\draw_silent
+snd_open_weapon			= weapons\draw_silent
+snd_add_cartridge		= weapons\mp153\mp153_insertshell
+snd_close_weapon		= weapons\draw_silent
+
+[wpn_svd_sounds]:base_sounds
+snd_draw			= weapons\svd\svd_draw
+snd_holster			= weapons\sniper_holster
+snd_shoot			= weapons\svd\svd_shoot
+snd_shoot1			= weapons\svd\svd_shoot1
+snd_empty			= weapons\ak_empty, 0.7
+snd_reload			= weapons\svd\svd_reload
+snd_reload_empty	= weapons\svd\svd_reload_empty
+snd_bore			= weapons\draw_silent
+snd_bore1			= weapons\draw_silent
+
+[wpn_svd_nimble_sounds]:wpn_svd_sounds
+
+snd_shoot			= weapons\svd\svd_nimble_shoot
+snd_shoot1			= weapons\svd\svd_nimble_shoot1
+snd_reload			= weapons\svd\svd_nimble_reload
+snd_reload_empty	= weapons\svd\svd_nimble_reload_empty
+
+[wpn_svu_sounds]:base_sounds
+snd_draw                = weapons\svu\svu_draw
+snd_holster				= weapons\sniper_holster
+snd_shoot               = weapons\svu\svu_shoot
+snd_shoot1              = weapons\svu\svu_shoot1
+snd_shoot2              = weapons\svu\svu_shoot2
+snd_shoot3              = weapons\svu\svu_shoot3
+snd_shoot4              = weapons\svu\svu_shoot4
+snd_empty				= weapons\svu\svu_empty
+snd_reload              = weapons\svu\svu_reload
+snd_reload_empty        = weapons\svu\svu_reload_empty
+snd_close				= weapons\generic_close
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_toz34_sounds]:base_sounds
+snd_draw			= weapons\toz34\toz34_draw
+snd_holster			= weapons\shotgun_holster
+snd_shoot			= weapons\toz34\toz34_shoot  
+snd_empty			= weapons\toz34\toz34_empty
+snd_reload			= weapons\toz34\toz34_reload
+snd_shoot_duplet		= weapons\toz34\toz34_shoot_both
+snd_shoot_1			= weapons\toz34\toz34_shoot
+snd_reload_1			= weapons\toz34\toz34_reload_one		;reload left
+
+[wpn_usp_sounds]:base_sounds
+snd_draw				= weapons\usp45\usp45_draw
+snd_holster				= weapons\pistol_holster
+snd_shoot				= weapons\usp45\usp45_shoot
+snd_shoot1				= weapons\usp45\usp45_shoot1
+snd_shoot2				= weapons\usp45\usp45_shoot2
+snd_silncer_shot		= weapons\usp45\usp45_shoot_sil
+snd_empty				= weapons\usp45\usp45_empty
+snd_reload				= weapons\usp45\usp45_reload
+snd_reload_empty		= weapons\usp45\usp45_reload_empty
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_bore				= weapons\draw_silent
+snd_bore1				= weapons\draw_silent
+
+[wpn_usp_nimble_sounds]:wpn_usp_sounds
+snd_draw				= weapons\fnp45\fnp45_draw
+snd_shoot				= weapons\fnp45\fnp45_shoot
+snd_shoot1				= weapons\fnp45\fnp45_shoot1
+snd_shoot2				= weapons\fnp45\fnp45_shoot2
+snd_silncer_shot		= weapons\fnp45\fnp45_shoot_sil
+snd_reload				= weapons\fnp45\fnp45_reload
+snd_reload_empty		= weapons\fnp45\fnp45_reload_empty
+
+[wpn_val_sounds]:base_sounds
+snd_draw					= weapons\val\val_draw
+snd_holster					= weapons\rifle_holster
+snd_shoot					= weapons\val\val_shoot
+snd_shoot1					= weapons\val\val_shoot1
+snd_shoot2					= weapons\val\val_shoot2
+snd_shoot3					= weapons\val\val_shoot3
+snd_empty					= weapons\val\val_empty, 0.8
+snd_reload					= weapons\val\val_reload
+snd_reload_empty			= weapons\val\val_reload_empty
+snd_shoot_grenade			= weapons\gen_grenshoot
+snd_reload_grenade			= weapons\gen_grenload
+snd_silncer_shot            = weapons\val\val_shoot
+snd_silncer_shot1           = weapons\val\val_shoot1
+snd_silncer_shot2           = weapons\val\val_shoot2
+snd_silncer_shot3           = weapons\val\val_shoot3
+
+[wpn_vintorez_sounds]:base_sounds
+snd_draw					= weapons\vintorez\vintorez_draw
+snd_holster					= weapons\rifle_holster
+snd_shoot					= weapons\vintorez\vintorez_shoot
+snd_shoot1					= weapons\vintorez\vintorez_shoot1 
+snd_empty					= weapons\vintorez\vintorez_empty, 0.8
+snd_reload					= weapons\vintorez\vintorez_reload
+snd_reload_empty			= weapons\vintorez\vintorez_reload_empty
+snd_shoot_grenade			= weapons\gen_grenshoot
+snd_reload_grenade			= weapons\gen_grenload
+snd_silncer_shot            = weapons\vintorez\vintorez_shoot
+snd_silncer_shot1            = weapons\vintorez\vintorez_shoot1
+
+[wpn_walther_sounds]:base_sounds
+snd_draw					= weapons\p99\p99_draw
+snd_holster					= weapons\pistol_holster
+snd_shoot					= weapons\p99\p99_shoot
+snd_shoot1					= weapons\p99\p99_shoot1 
+snd_shoot2					= weapons\p99\p99_shoot2     
+snd_empty					= weapons\p99\p99_empty
+snd_reload					= weapons\p99\p99_reload
+snd_reload_empty			= weapons\p99\p99_reload_empty
+snd_close					= weapons\p99\p99_close
+snd_silncer_shot			= weapons\p99\p99_shoot_sil
+snd_bore			       	= weapons\draw_silent
+snd_bore1			       	= weapons\draw_silent
+
+[wpn_winchester1300_sounds]:base_sounds
+snd_draw				= weapons\mossberg\mossberg_draw
+snd_holster				= weapons\shotgun_holster
+snd_shoot				= weapons\mossberg\mossberg_shoot
+snd_empty				= weapons\mossberg\mossberg_empty
+snd_reload				= weapons\mossberg\mossberg_reload
+snd_bore				= weapons\draw_silent
+snd_open_weapon			= weapons\draw_silent
+snd_add_cartridge		= weapons\mossberg\mossberg_reload
+snd_close_weapon		= weapons\mossberg\mossberg_reload_end
+
+[wpn_winchester1300_trapper_sounds]:wpn_winchester1300_sounds
+snd_draw				= weapons\toz194\toz194_draw
+snd_holster				= weapons\shotgun_holster
+snd_shoot				= weapons\toz194\toz194_shoot
+snd_empty				= weapons\mossberg\mossberg_empty
+snd_reload				= weapons\toz194\toz194_shell
+snd_bore				= weapons\draw_silent
+snd_open_weapon			= weapons\draw_silent
+snd_add_cartridge		= weapons\toz194\toz194_shell
+snd_close_weapon		= weapons\toz194\toz194_pump
+
+;-------------------------------------------------------------------------------
+[wpn_fake_og-7b_sounds]
+snd_explode 						= weapons\rpg7_explode
+snd_fly_sound						= weapons\rocket_fly
+
+[wpn_fake_vog-25_sounds]
+snd_explode							= weapons\f1_explode
+
+[wpn_fake_vog-25p_sounds]
+snd_explode							= weapons\f1_explode
+
+[wpn_fake_m209_sounds]
+snd_explode							= weapons\f1_explode
+
+;-------------------------------------------------------------------------------
+[explosive_fuelcan_sounds]
+snd_explode							= weapons\f1_explode
+
+[explosive_tank_sounds]
+snd_explode							= weapons\f1_explode
+
+[explosive_barrel_low_sounds]
+snd_explode							= weapons\f1_explode
+
+[explosive_grenade_sounds]
+snd_explode							= weapons\t_rgd5_explosion
+
+[explosive_hide_sounds]
+snd_explode							= weapons\rpg7_explode
+
+[explosive_particle_sounds]
+snd_explode							= weapons\f1_explode_
+
+[explosive_barrel_sounds]
+snd_explode							= weapons\f1_explode
+
+[explosive_mobiltank_sounds]
+snd_explode							= weapons\f1_explode
+
+[explosive_dinamit_sounds]
+snd_explode							= weapons\f1_explode

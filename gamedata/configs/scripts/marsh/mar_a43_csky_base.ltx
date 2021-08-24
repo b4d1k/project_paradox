@@ -1,0 +1,155 @@
+;---Ученый
+[logic@mar_a43_csky_uch]
+suitable = {=check_npc_name(mar_a43_csky_uch)} true
+prior = 200
+active = walker@mar_a43_csky_uch
+can_select_weapon = false
+
+[walker@mar_a43_csky_uch]
+path_walk = csky_uch_walk
+path_look = csky_uch_look
+;def_state_standing = wait
+meet = meet@mar_a43_csky_uch
+use_camp = false
+reach_distance = 1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+[meet@mar_a43_csky_uch]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_base_csky========
+[meet@base_csky]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@mar_a43_stalker_1]
+suitable = {=check_npc_name(mar_a43_stalker_1)}
+prior = 200
+active = animpoint@mar_a43_stalker_1
+
+[animpoint@mar_a43_stalker_1]
+cover_name = mar_a43_stalker_cover_1
+avail_animations = animpoint_stay_table_weapon
+use_camp = false
+meet = meet@mar_a43_stalker_1
+
+[meet@mar_a43_stalker_1]:meet@base_csky
+
+
+
+[logic@mar_a43_stalker_2]
+suitable = {=check_npc_name(mar_a43_stalker_2)}
+prior = 200
+active = animpoint@mar_a43_stalker_2
+
+[animpoint@mar_a43_stalker_2]
+cover_name = mar_a43_stalker_cover_2
+avail_animations = animpoint_stay_table_drink_energy
+use_camp = false
+meet = meet@mar_a43_stalker_2
+
+[meet@mar_a43_stalker_2]:meet@base_csky
+
+
+
+[logic@mar_a43_stalker_3]
+suitable = {=check_npc_name(mar_a43_stalker_3)}
+prior = 200
+active = animpoint@mar_a43_stalker_3
+
+[animpoint@mar_a43_stalker_3]
+cover_name = mar_a43_stalker_cover_3
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = no_meet
+
+
+
+[logic@mar_a43_stalker_4]
+suitable = {=check_npc_name(mar_a43_stalker_4)}
+prior = 200
+active = animpoint@mar_a43_stalker_4
+
+[animpoint@mar_a43_stalker_4]
+cover_name = mar_a43_stalker_cover_4
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = meet@mar_a43_stalker_4
+
+[meet@mar_a43_stalker_4]:meet@base_csky
+
+
+
+[logic@mar_a43_stalker_5]
+suitable = {=check_npc_name(mar_a43_stalker_5)}
+prior = 200
+active = animpoint@mar_a43_stalker_5
+
+[animpoint@mar_a43_stalker_5]
+cover_name = mar_a43_stalker_cover_5
+avail_animations = zat_b106_wounded_idle
+meet = no_meet
+
+
+
+[logic@mar_a43_stalker_6]
+suitable = {=check_npc_name(mar_a43_stalker_6)}
+prior = 200
+active = animpoint@mar_a43_stalker_6
+
+[animpoint@mar_a43_stalker_6]
+cover_name = mar_a43_stalker_cover_6
+avail_animations = jup_b10_drunk_ravings
+meet = no_meet
+
+
+
+[logic@mar_a43_stalker_7]
+suitable = {=check_npc_name(mar_a43_stalker_7)}
+prior = 200
+active = walker@mar_a43_stalker_7
+
+[walker@mar_a43_stalker_7]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@mar_a43_stalker_8]
+suitable = {=check_npc_name(mar_a43_stalker_8)}
+prior = 200
+active = walker@mar_a43_stalker_8
+
+[walker@mar_a43_stalker_8]
+path_walk = stalker_2_walk
+path_look = stalker_2_look
+def_state_moving = patrol
+meet = no_meet

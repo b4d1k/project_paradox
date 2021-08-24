@@ -1,0 +1,33 @@
+[smart_terrain]
+squad_id = 34
+respawn_params = respawn@esc_novice_village
+max_population = 8
+arrive_dist = 65
+def_restr = esc_novice_village_restr
+spawn_point = esc_nv_spawn_point
+
+[respawn@esc_novice_village]
+spawn_stalker@novice
+spawn_stalker@advanced
+
+[spawn_stalker@novice]
+spawn_squads = stalker_sim_squad_novice
+spawn_num = {-esc_sidor_finded} 4, 0 
+
+[spawn_stalker@advanced]
+spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_novice
+spawn_num = {+esc_sidor_finded} 4, 0
+
+[exclusive]
+;esc_razlom = escape\esc_razlom.ltx
+;esc_tolik = escape\esc_tolik.ltx
+esc_nv_animpoint_1 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_2 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_3 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_4 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_5 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_6 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_7 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_8 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_9 = escape\esc_novice_village_logic.ltx
+esc_nv_animpoint_10 = escape\esc_novice_village_logic.ltx

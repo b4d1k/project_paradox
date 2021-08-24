@@ -1,0 +1,382 @@
+; Штурмовой карабин (автомат) Steyr AUG-77
+;-(TrickSR)-----------------------------------------
+; калибр 							5.56x45 мм
+; длина ствола 						508 мм
+; магазин							30
+; вес без магазина					3.6
+; оптический прицел					х1.5
+; максимальная дальность стрельбы	4200 м
+; эффективная дальность стрельбы	475 м
+; прицельная дальность				650 м
+; дульная скорость пули				992 м/с
+; темп стрельбы						720 в/м
+;---------------------------------------------------
+[wpn_fn2000]:weapon_probability,default_weapon_params,wpn_fn2000_sounds
+GroupControlSection					= spawn_group
+$spawn								= "weapons\fn-2000"
+$npc								= on					; option for Level Editor
+$prefetch							= 8
+scheduled							= off					; option for ALife Simulator
+cform								= skeleton
+class								= WP_AK74
+description							= st_wpn_fn2000_descr
+
+ef_main_weapon_type					= 2
+ef_weapon_type						= 8
+
+;-------------------------------------------------------------------------------
+inv_name 							= st_wpn_fn2000
+inv_name_short 						= st_wpn_fn2000
+
+inv_grid_width						= 4
+inv_grid_height						= 2
+inv_grid_x							= 5
+inv_grid_y							= 9
+
+upgr_icon_x							= 1175
+upgr_icon_y							= 0
+upgr_icon_width						= 300
+upgr_icon_height 					= 150
+
+kill_msg_x							= 131
+kill_msg_y							= 123
+kill_msg_width						= 64
+kill_msg_height						= 30
+
+;-------------------------------------------------------------------------------
+cost								= 14000
+weapon_class						= assault_rifle
+inv_weight							= 3.6
+hud									= wpn_fn2000_hud
+visual								= dynamics\weapons\wpn_fn2000\wpn_fn2000.ogf
+
+upgrades							= up_gr_firstab_fn2000, up_gr_seconab_fn2000, up_gr_thirdab_fn2000, up_gr_fourtab_fn2000, up_gr_fourtcd_fn2000, up_gr_fourtef_fn2000	;, up_gr_fifthab_fn2000
+installed_upgrades					=
+upgrade_scheme						= upgrade_scheme_fn2000
+
+ph_mass								= 5
+
+;-------------------------------------------------------------------------------
+ammo_class							= ammo_5.56x45_ss190, ammo_5.56x45_ap
+
+startup_ammo						= 90
+ammo_current						= 180
+ammo_elapsed						= 30					; obsolete
+ammo_limit							= 210
+ammo_mag_size						= 30					; clip (magazine) size
+
+fire_modes							= 1, 3, -1
+
+grenade_class						= ammo_m209
+
+grenade_vel 						= 76
+launch_speed 						= 76
+hand_dependence						= 1
+single_handed						= 0
+
+;-TTX---------------------------------------------------------------------------
+;hit_power							= 0.50, 0.50, 0.50, 0.50
+;hit_impulse						= 10
+hit_type							= fire_wound
+fire_distance						= 4200
+bullet_speed 						= 992					; начальная скорость пули
+rpm									= 720
+rpm_empty_click						= 200
+
+use_aim_bullet						= false					; Поддерживается ли первая суппер пуля
+time_to_aim							= 1.0
+
+misfire_probability					= 0.005					; вероятность осечки при максимальном износе!!!old - now not working
+misfire_start_condition				= 0.6					; изношенность, при которой появляется шанс осечки
+misfire_end_condition				= 0.1					; изношеность при которой шанс осечки становится константным
+misfire_start_prob	 				= 0.005					; шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob	 				= 0.06					; шанс осечки при изношености больше чем misfireEndCondition
+condition_shot_dec					= 0.00013				; увеличение изношености при одиночном выстреле
+condition_queue_shot_dec			= 0.0002				; увеличение изношености при выстреле очередью
+
+;-DOF---------------------------------------------------------------------------
+;zoom_dof							= 0.5, 1.0, 180
+reload_dof							= 0.0, 0.5, 5, 2
+
+;-дисперсия---------------------------------------------------------------------
+fire_dispersion_base				= 0.02					; угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_condition_factor	= 11					; увеличение дисперсии в процентах при максимальном износе
+control_inertion_factor				= 1.2f
+crosshair_inertion					= 6.30
+
+;-отдача------------------------------------------------------------------------
+cam_return 							= 0
+cam_relax_speed						= 5						; скорость возврата в исходное положение
+cam_relax_speed_ai 					= 120.75
+cam_dispersion						= 0.3 					; увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc					= 0.15 					; увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac					= 1.0 					; ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle						= 50.0					; максимальный угол отдачи
+cam_max_angle_horz					= 50.0					; (degree) maximum shot horizontal degree
+cam_step_angle_horz					= 1.2 					; (degree) size of step camera moved in horizontal position while shooting
+
+zoom_cam_relax_speed				= 5						; scope & ironsight
+zoom_cam_relax_speed_ai				= 360
+zoom_cam_dispersion					= 0.3
+zoom_cam_dispersion_inc				= 0.15
+zoom_cam_dispersion_frac			= 1.0
+zoom_cam_max_angle					= 50.0
+zoom_cam_max_angle_horz				= 50.0
+zoom_cam_step_angle_horz			= 1.0
+
+PDM_disp_base 						= 0.5
+PDM_disp_vel_factor 				= 2.0
+PDM_disp_accel_factor 				= 2.0
+PDM_disp_crouch	 					= 1.0
+PDM_disp_crouch_no_acc 				= 1.0
+
+;- for AI ----------------------------------------------------------------------
+min_radius							= 30
+max_radius							= 90
+
+holder_range_modifier				= 1.25					; во сколько раз увеличивается eye_range
+holder_fov_modifier					= 1.00					; во сколько раз увеличивается eye_fov
+
+;-------------------------------------------------------------------------------
+slot								= 2						; // secondary
+animation_slot						= 2						; type of the animation that will be used
+
+position							= -0.026, -0.132, 0.0
+orientation							= 0, 0, 0
+
+fire_point							=  0.000000,0.184,0.35
+fire_point2							= 0.0, 0.123, 0.398
+
+flame_particles						= weapons\generic_weapon05
+smoke_particles						= weapons\generic_shoot_00
+grenade_flame_particles				= weapons\generic_weapon01
+
+shell_point 						= -0.020000,0.186000,0.200000
+shell_dir							= 0.0, 1.0, 0.0
+shell_particles						= weapons\556x45
+;-STRAP PARAMETERS--------------------------------------------------------------
+;на плечо (подмышка)
+strap_position						= -0.15,-0.35,0.27		; position (offset) and orientation of the weapon when it is strapped
+strap_orientation					= -10,-3,10				; (3rd person view in degrees))
+strap_orientation					= -10,-5,10				; (3rd person view in degrees)
+strap_bone0							= bip01_spine2
+strap_bone1							= bip01_spine1
+
+light_disabled						= false
+light_color							= 0.6,0.5,0.3
+light_range							= 4
+light_var_color						= 0.05
+light_var_range						= 0.1
+light_time							= 0.2
+
+;-addons------------------------------------------------------------------------
+scope_status						= 1
+silencer_status						= 0
+grenade_launcher_status				= 0
+
+zoom_enabled						= true					; (on,off)zoom mode (right mouse button)
+zoom_rotate_time					= 0.25
+
+scope_zoom_factor					= 35.16					; x1.5
+scope_texture						= wpn_crosshair_aug
+
+scope_name							= wpn_addon_scope_susat
+scope_x								= -19
+scope_y								= 12
+
+lens_texture						= wpn\wpn_crosshair_g36_lens
+lens_texture_x						= 183
+lens_texture_y						= 75
+lens_texture_w						= 648
+lens_texture_h						= 648
+
+grenade_launcher_name				= wpn_addon_grenade_launcher
+grenade_launcher_x					= 95
+grenade_launcher_y					= 25
+
+silencer_name						= wpn_addon_silencer
+scope_x								= -15
+scope_y								= 10
+
+;silencer_hit_power 				= 0.45, 0.45, 0.45, 0.45
+;silencer_hit_impulse	 			= 10
+silencer_fire_distance 				= 850
+silencer_bullet_speed	 			= 290
+
+;silencer_flame_particles			= weapons\generic_weapon01
+silencer_smoke_particles			= weapons\generic_shoot_00
+
+silencer_light_color				= 0.6,0.5,0.3
+silencer_light_range				= 0.01
+silencer_light_var_color			= 0.05
+silencer_light_var_range			= 0.5
+silencer_light_time					= 0.2
+
+[wpn_fn2000_hud]:hud_base
+zoom_hide_crosshair					= true
+attach_place_idx	= 0
+item_visual					= dynamics\weapons\wpn_fn2000\wpn_fn2000_hud.ogf
+
+hands_position				= -0.02,-0.13,0.3
+hands_orientation			= 2,2,0
+hands_position_16x9			= -0.02,-0.13,0.3
+hands_orientation_16x9		= 2,2,0
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+shell_point             = 0,0,0
+shell_dir               = 0.0, 1.0, 0.0
+shell_bone              = gilza
+
+fire_point				= 0,0,0
+fire_bone               = muzzle
+fire_point2             = 0,0,0
+fire_bone2				= wpn_body
+
+anm_show             	= aug_draw
+anm_hide             	= aug_holster
+anm_idle             	= aug_idle
+anm_idle_sprint         = aug_idle_sprint
+anm_idle_moving 		= aug_idle_moving
+anm_idle_moving_crouch 	= aug_idle_crouch
+anm_shots               = aug_shoot
+anm_reload              = aug_reload
+anm_reload_empty		= aug_reload_empty
+anm_idle_aim           	= aug_idle_aim
+anm_bore				= aug_idle_aim
+
+aim_hud_offset_pos_16x9 = -0.1217,-0.01,-0.2
+aim_hud_offset_rot_16x9 = 0.025,0.035,0.0
+gl_hud_offset_pos_16x9 	= -0.084,0.015,-0.1
+gl_hud_offset_rot_16x9 	= -0.076,0.03275,0
+
+aim_hud_offset_pos 	= -0.1217,-0.01,-0.2
+aim_hud_offset_rot 	= 0.025,0.035,0.0
+gl_hud_offset_pos	= -0.084,0.015,-0.1
+gl_hud_offset_rot	= -0.076,0.03275,0
+
+lean_hud_offset_pos		= 0,0,0
+lean_hud_offset_rot		= 0,0,0
+
+;-----------------------------------------------------------------------------
+; Уникальные
+;-----------------------------------------------------------------------------
+; Штурмовой карабин (автомат) FN Herstal F2000 STD
+;-(TrickSR)-----------------------------------------
+; калибр 							5.56x45 мм
+; длина ствола 						400 мм
+; магазин							30
+; вес без магазина					3.8
+; вес без магазина	(+40mm грнтм.)	4.6
+; оптический прицел					х1.6
+; максимальная дальность стрельбы	4200 м
+; эффективная дальность стрельбы	400 м
+; прицельная дальность				540 м
+; дульная скорость пули				910 м/с
+; темп стрельбы						850 в/м
+[wpn_fn2000_nimble]:wpn_fn2000, wpn_fn2000_nimble_sounds
+
+$spawn								= "weapons\wpn_fn2000_nimble"	; name and section in level editor
+
+description							= st_wpn_fn2000_nimble_descr
+
+inv_name 							= st_wpn_fn2000_nimble
+inv_name_short 						= st_wpn_fn2000_nimble
+
+inv_weight							= 4.6
+
+bullet_speed 						= 992					; начальная скорость пули
+rpm									= 720
+
+cost								= 20000
+
+inv_grid_width     = 4
+inv_grid_height    = 2
+inv_grid_x         = 20
+inv_grid_y         = 2
+
+upgr_icon_x							= 1475
+upgr_icon_y							= 0
+upgr_icon_width						= 300
+upgr_icon_height 					= 150
+
+visual                   = dynamics\weapons\wpn_fn2000\wpn_fn2000.ogf
+grenade_launcher_status = 1
+hud = wpn_fn2000_nimble_hud
+
+scope_zoom_factor					= 37.5					; x1.6
+scope_texture						= wpn_crosshair_f2000
+
+silencer_x							= -23
+silencer_y							= 13
+
+snd_shoot               	= weapons\fn2000\fn2000_shoot
+snd_shoot1               	= weapons\fn2000\fn2000_shoot1
+snd_shoot2               	= weapons\fn2000\fn2000_shoot2
+snd_shoot3               	= weapons\fn2000\fn2000_shoot3
+snd_shoot4               	= weapons\fn2000\fn2000_shoot
+
+snd_reload        		= weapons\fn2000\fn2000_reload
+snd_reload_empty		= weapons\fn2000\fn2000_reload_empty
+snd_shoot_grenade       = weapons\m203_grenshoot
+snd_reload_grenade      = weapons\fn2000\fn2000_grenload
+snd_switch              = weapons\fn2000\fn2000_switch
+
+snd_silncer_shot        = weapons\fn2000\fn2000_shot_sil
+
+[wpn_fn2000_nimble_hud]:wpn_fn2000_hud
+
+item_visual					= dynamics\weapons\wpn_fn2000\wpn_fn2000_nimble_hud.ogf
+
+
+anm_show             			= f2000_draw
+anm_hide             			= f2000_holster
+anm_idle             			= f2000_idle
+anm_idle_sprint         		= f2000_idle_sprint
+anm_idle_moving 				= f2000_idle_moving
+anm_idle_moving_crouch 			= f2000_idle_crouch
+anm_shots               		= f2000_shoot
+anm_reload              		= f2000_reload
+anm_reload_empty				= f2000_reload_empty
+anm_idle_aim           			= f2000_idle_aim
+		
+anm_switch              		= f2000_switch_off
+anm_switch_g            		= f2000_switch_on
+anm_bore						= f2000_idle_aim
+		
+anm_show_w_gl           		= f2000_draw
+anm_hide_w_gl           		= f2000_holster
+anm_idle_w_gl           		= f2000_idle
+anm_shots_w_gl          		= f2000_shoot
+anm_reload_w_gl         		= f2000_reload
+anm_reload_empty_w_gl   		= f2000_reload_empty
+anm_idle_w_gl_aim       		= f2000_idle_aim
+anm_idle_sprint_w_gl			= f2000_idle_sprint
+anm_idle_moving_w_gl			= f2000_idle_moving
+anm_idle_moving_crouch_w_gl    	= f2000_idle_crouch
+anm_bore_w_gl					= f2000_idle_aim
+		
+anm_show_g         				= f2000_draw_grenade, f2000_idle_grenade
+anm_hide_g         				= f2000_holster_grenade, f2000_idle_grenade
+anm_idle_g          			= f2000_idle_grenade, f2000_idle_grenade
+anm_reload_g       				= f2000_reload_grenade
+anm_idle_g_aim      			= f2000_idle_aim_grenade, f2000_idle_grenade
+anm_shots_g         			= f2000_shoot_grenade
+anm_idle_sprint_g				= f2000_idle_sprint_grenade, f2000_idle_grenade
+anm_idle_moving_g				= f2000_idle_moving_grenade, f2000_idle_grenade
+anm_idle_moving_crouch_g		= f2000_idle_crouch_grenade, f2000_idle_grenade
+anm_bore_g						= f2000_idle_aim_grenade, f2000_idle_grenade
+
+
+aim_hud_offset_pos_16x9 = -0.1217,-0.02,-0.2
+aim_hud_offset_rot_16x9 = 0.025,0.035,0.0
+gl_hud_offset_pos_16x9 	= -0.175,-0.04,0.0
+gl_hud_offset_rot_16x9 	= 0.0,0.03275,0.0
+
+aim_hud_offset_pos 	= -0.1217,-0.02,-0.2
+aim_hud_offset_rot 	= 0.025,0.035,0.0
+gl_hud_offset_pos	= -0.175,-0.04,0.0
+gl_hud_offset_rot	= 0.0,0.03275,0.0
+
+lean_hud_offset_pos	= 0,0,0
+lean_hud_offset_rot	= 0,0,0

@@ -1,0 +1,348 @@
+; SIG-Sauer P220 .45ACP
+;-(TrickSR)-----------------------------------------
+; калибр 							9x19 мм
+; длина ствола 						114 мм
+; магазин							17
+; вес без магазина					0.7
+; максимальна€ дальность стрельбы	610 м
+; эффективна€ дальность стрельбы	60 м
+; прицельна€ дальность				---
+; дульна€ скорость пули				375 м/с
+; темп стрельбы						30 в/м
+;---------------------------------------------------
+
+[wpn_sig220]:weapon_probability,default_weapon_params,wpn_sig220_sounds
+GroupControlSection					= spawn_group
+$spawn 								= "weapons\sig220"		; option for Level Editor
+$npc								= on					; option for Level Editor
+$prefetch							= 8
+scheduled							= off					; option for ALife Simulator
+cform								= skeleton
+class								= WP_PM
+description							= st_wpn_sig220_descr
+
+ef_main_weapon_type					= 5
+ef_weapon_type						= 5
+
+;-------------------------------------------------------------------------------
+inv_name							= st_wpn_sig220			; name in inventory
+inv_name_short						= st_wpn_sig220
+
+inv_grid_width						= 2
+inv_grid_height						= 1
+inv_grid_x							= 2
+inv_grid_y							= 26
+
+upgr_icon_x							= 300
+upgr_icon_y							= 750
+upgr_icon_width						= 300
+upgr_icon_height 					= 150
+
+kill_msg_x							= 72
+kill_msg_y							= 177
+kill_msg_width						= 31
+kill_msg_height						= 24
+
+;-------------------------------------------------------------------------------
+cost								= 1200					; the price of the item
+weapon_class						= 
+inv_weight							= 0.703
+hud									= wpn_sig220_hud
+visual								= dynamics\weapons\wpn_sig220\wpn_sig220.ogf
+
+upgrades							= up_gr_firstab_sig220, up_gr_seconab_sig220, up_gr_thirdab_sig220, up_gr_fourtab_sig220, up_gr_fifthab_sig220
+installed_upgrades					=
+upgrade_scheme						= upgrade_scheme_sig220
+
+ph_mass								= 1
+
+;-------------------------------------------------------------------------------
+ammo_class							= ammo_9x19_fmj, ammo_9x19_pbp
+
+startup_ammo 						= 90
+ammo_current						= 42
+ammo_elapsed		 				= 17
+ammo_limit							= 49
+ammo_mag_size		 				= 17; clip (magazine) size
+
+fire_modes							= 1
+
+grenade_class						= ammo_vog-25			; name of the ltx-section of used grenades
+
+launch_speed						= 0
+hand_dependence					 	= 1
+single_handed						= 1
+
+;----TTX--------------------------------------------------------------------------
+;hit_power 							= 0.50, 0.50, 0.50, 0.50
+;hit_impulse	 	 				= 10
+hit_type 							= fire_wound
+fire_distance 						= 610
+bullet_speed		 				= 375
+rpm 								= 200
+rpm_empty_click 	 				= 120
+
+use_aim_bullet						= false					; ѕоддерживаетс€ ли перва€ суппер пул€
+time_to_aim							= 1.0
+
+misfire_probability					= 0.005					; веро€тность осечки при максимальном износе!!!old - now not working
+misfire_start_condition				= 0.6					; изношенность, при которой по€вл€етс€ шанс осечки
+misfire_end_condition				= 0.1					; изношеность при которой шанс осечки становитс€ константным
+misfire_start_prob	 				= 0.007					; шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob	 				= 0.07					; шанс осечки при изношености больше чем misfireEndCondition
+condition_shot_dec					= 0.0006				; увеличение изношености при одиночном выстреле
+condition_queue_shot_dec			= 0.0006				; увеличение изношености при выстреле очередью
+
+;-DOF---------------------------------------------------------------------------
+zoom_dof							= -1000, 1.0, 1000
+reload_dof							= 0.0, 0.5, 5, 1.7
+
+;-дисперси€---------------------------------------------------------------------
+fire_dispersion_base				= 0.023	;0.8			; угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+fire_dispersion_condition_factor	= 9						; увеличение дисперсии в процентах при максимальном износе
+control_inertion_factor				= 1.0
+crosshair_inertion 					= 3.10
+
+;-отдача------------------------------------------------------------------------
+cam_return							= 0
+cam_relax_speed						= 7						;скорость возврата в исходное положение
+cam_relax_speed_ai					= 120.75
+cam_dispersion						= 1.2					;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc					= 1.2					;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac					= 1.0					;ствол будет подыматьс€ на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle						= 10.0					;максимальный угол отдачи
+cam_max_angle_horz					= 10.0					;(degree) maximum shot horizontal degree
+cam_step_angle_horz					= 1.2					;(degree) size of step camera moved in horizontal position while shooting
+
+zoom_cam_relax_speed				= 10					; scope & ironsight
+zoom_cam_relax_speed_ai				= 120.75
+zoom_cam_dispersion					= 0.3
+zoom_cam_dispersion_inc				= 0.75
+zoom_cam_dispersion_frac			= 0.7
+zoom_cam_max_angle					= 5.0
+zoom_cam_max_angle_horz				= 10.0
+zoom_cam_step_angle_horz			= 1.5
+
+PDM_disp_base 						= 0.5
+PDM_disp_vel_factor 				= 1.1
+PDM_disp_accel_factor 				= 1.1
+PDM_disp_crouch	 					= 1.0
+PDM_disp_crouch_no_acc 				= 1.0
+
+;- for AI ----------------------------------------------------------------------
+min_radius							= 0
+max_radius							= 40
+
+holder_range_modifier				= 1.0					; во сколько раз увеличиваетс€ eye_range
+holder_fov_modifier					= 1.0					; во сколько раз увеличиваетс€ eye_fov
+
+;-------------------------------------------------------------------------------
+slot 			 					= 1
+animation_slot						= 1						; type of the animation that will be used
+
+position							= -0.021, -0.085, 0.0
+orientation 						= 0, 0, 0
+
+fire_point							= 0.0, 0.133, 0.161
+fire_point2							= 0.0, 0.133, 0.161
+
+flame_particles		 				= weapons\generic_weapon03
+smoke_particles		 				= weapons\generic_shoot_00
+grenade_flame_particles				= weapons\generic_weapon01
+
+shell_point		 					= 0.0, 0.133, 0.047
+shell_dir		 					= 0.0, 0.0, 0.4
+shell_particles	 					= weapons\9x19
+
+;-STRAP PARAMETERS--------------------------------------------------------------
+;strap_position 					= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation					= -10,-5,10					; (3rd person view in degrees)
+;strap_bone0						= bip01_spine2
+;strap_bone1						= bip01_spine1
+
+light_disabled						= false
+light_color							= 0.6,0.5,0.3
+light_range							= 5
+light_var_color						= 0.05
+light_var_range						= 0.5
+light_time							= 0.2
+
+;-addons------------------------------------------------------------------------
+scope_status						= 0							; 0 - no addon
+silencer_status						= 2							; 1 - permanent
+grenade_launcher_status				= 0							; 2 - attachable
+
+zoom_enabled						= true
+zoom_rotate_time					= 0.25
+scope_zoom_factor = 60						; fov for zoom mode
+
+scope_name							= wpn_addon_scope			; section name for the attachable scope
+scope_x								= 47						; offset in inventory icon
+scope_y								= 0
+
+grenade_launcher_name				= wpn_addon_grenade_launcher; section name for the attachable grenade launcher
+grenade_launcher_x					= 126						; offset in inventory icon
+grenade_launcher_y					= 24
+
+silencer_name						= wpn_addon_silencer		; section name for the attachable silencer
+silencer_x 							= -14						; offset in inventory icon
+silencer_y 							= -18
+
+;silencer_hit_power 				= 0.45, 0.45, 0.45, 0.45
+;silencer_hit_impulse	 			= 10
+silencer_fire_distance 				= 415
+silencer_bullet_speed	 			= 285
+
+;silencer_flame_particles			= weapons\generic_weapon01
+silencer_smoke_particles 			= weapons\generic_shoot_00
+
+silencer_light_color				= 0.6,0.5,0.3
+silencer_light_range				= 0.01
+silencer_light_var_color			= 0.05
+silencer_light_var_range			= 0.5
+silencer_light_time 				= 0.2
+
+[wpn_sig220_hud]:hud_base
+zoom_hide_crosshair					= true
+
+hands_position			= 0.033,-0.1895,0.039
+hands_orientation		= 2,2,0
+hands_position_16x9		= 0.033,-0.1895,0.039
+hands_orientation_16x9	= 2,2,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+item_visual             	= dynamics\weapons\wpn_sig220\wpn_sig220_hud.ogf
+attach_place_idx				= 0
+
+shell_point					= 0,0,0
+shell_bone              	= gilza
+
+
+fire_point					= 0,0,0
+fire_bone               	= muzzle
+
+anm_show						= glock_draw
+anm_show_empty					= glock_draw, opened
+anm_hide            			= glock_holster
+anm_hide_empty					= glock_holster, opened
+		
+anm_idle            			= glock_idle
+anm_idle_empty      			= glock_idle, opened
+anm_shots						= glock_shoot, shoot
+anm_shot_l						= glock_shoot, shoot_last
+anm_idle_aim					= glock_idle_aim
+anm_idle_aim_empty				= glock_idle_aim, opened
+		
+anm_reload						= glock_reload, reload
+anm_reload_empty				= glock_reload_empty, reload_empty
+anm_idle_moving					= glock_idle_moving
+anm_idle_moving_empty			= glock_idle_moving, opened
+anm_idle_moving_crouch			= glock_idle_crouch
+anm_idle_moving_crouch_empty	= glock_idle_crouch, opened
+anm_idle_sprint					= glock_idle_sprint
+anm_idle_sprint_empty			= glock_idle_sprint, opened
+anm_bore						= glock_idle_aim
+anm_bore_empty					= glock_idle_aim, opened
+
+
+aim_hud_offset_pos 			= -0.157,0.079,-0.15
+aim_hud_offset_rot 			= 0.0275,0.03475,0.0
+aim_hud_offset_pos_16x9 	= -0.157,0.079,-0.15
+aim_hud_offset_rot_16x9 	= 0.0275,0.03475,0.0
+
+gl_hud_offset_pos			= 0,0,0
+gl_hud_offset_rot			= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+
+
+;-----------------------------------------------------------------------------
+; ”никальнvе
+;-----------------------------------------------------------------------------
+; SIG-Sauer P226
+;-(TrickSR)-----------------------------------------
+; калибр 							9x19 мм
+; длина ствола 						112 мм
+; магазин							15
+; вес без магазина					1.13
+; максимальна€ дальность стрельбы	610 м
+; эффективна€ дальность стрельбы	60 м
+; прицельна€ дальность				---
+; дульна€ скорость пули				350 м/с
+; темп стрельбы						30 в/м
+;---------------------------------------------------
+[wpn_sig220_nimble]:wpn_sig220, wpn_sig220_nimble_sounds
+$spawn								= "weapons\wpn_sig220_nimble"	; name and section in level editor
+inv_name							= st_wpn_sig220_nimble
+description							= st_wpn_sig220_nimble_descr
+
+cost								= 2800
+
+inv_weight							= 0.845
+ammo_class		 					= ammo_11.43x23_fmj, ammo_11.43x23_hydro
+ammo_current						= 60
+ammo_elapsed		 				= 7
+ammo_limit							= 70
+ammo_mag_size		 				= 7
+
+fire_dispersion_base				= 0.02	;0.8			; угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+
+condition_shot_dec					= 0.0006
+condition_queue_shot_dec			= 0.0006
+
+shell_particles	 					= weapons\45acp
+
+hud                     = wpn_sig220_nimble_hud
+visual                  = dynamics\weapons\wpn_sig220\wpn_sig220_nimble
+
+silencer_name						= wpn_addon_silencer		; section name for the attachable silencer
+silencer_x 							= -13						; offset in inventory icon
+silencer_y 							= -20
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 28
+inv_grid_y         = 0
+
+upgr_icon_x							= 600
+upgr_icon_y							= 150
+upgr_icon_width						= 275
+upgr_icon_height 					= 150
+
+[wpn_sig220_nimble_hud]:wpn_sig220_hud
+
+item_visual                  	= dynamics\weapons\wpn_sig220\wpn_sig220_nimble_hud
+fire_point						= 0,0.031996,0.130350
+fire_bone						= wpn_body
+
+anm_show						= p220_draw
+anm_show_empty					= p220_draw, opened
+anm_hide            			= p220_holster
+anm_hide_empty					= p220_holster, opened
+		
+anm_idle            			= p220_idle
+anm_idle_empty      			= p220_idle, opened
+anm_shots						= p220_shoot, shoot
+anm_shot_l						= p220_shoot, shoot_last
+anm_idle_aim					= p220_aim
+anm_idle_aim_empty				= p220_aim, opened
+		
+anm_reload						= p220_reload, reload
+anm_reload_empty				= p220_reload_empty, reload_empty
+anm_idle_moving					= p220_move
+anm_idle_moving_empty			= p220_move, opened
+anm_idle_moving_crouch			= p220_crouch
+anm_idle_moving_crouch_empty	= p220_crouch, opened
+anm_idle_sprint					= p220_sprint
+anm_idle_sprint_empty			= p220_sprint, opened
+anm_bore						= p220_aim
+anm_bore_empty					= p220_aim, opened
+
+
+aim_hud_offset_pos 			= -0.15625,0.0765,-0.15
+aim_hud_offset_rot 			= 0.0325,0.034,0.0
+aim_hud_offset_pos_16x9 	= -0.15625,0.0765,-0.15
+aim_hud_offset_rot_16x9 	= 0.0325,0.034,0.0

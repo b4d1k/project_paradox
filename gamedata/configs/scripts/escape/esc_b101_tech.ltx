@@ -1,0 +1,34 @@
+[logic@esc_b101_bandit_1]
+suitable = {=check_npc_name(esc_b101_bandit_1)}
+prior = 200
+active = animpoint@esc_b101_bandit_1
+
+
+[animpoint@esc_b101_bandit_1]
+cover_name = esc_b101_bandit_1_cover
+avail_animations = animpoint_sit_normal
+use_camp = false
+reach_distance = 1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = meet@esc_b101_bandit_1
+
+
+
+[meet@esc_b101_bandit_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false

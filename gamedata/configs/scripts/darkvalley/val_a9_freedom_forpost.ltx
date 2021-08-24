@@ -1,0 +1,162 @@
+;---Командир
+[logic@val_a9_freedom_komand]
+suitable = {=check_npc_name(val_a9_freedom_komand)} true
+prior = 200
+active = animpoint@val_a9_freedom_komand
+
+[animpoint@val_a9_freedom_komand]
+cover_name = val_a9_freedom_komand_cover
+avail_animations = animpoint_sit_normal
+reach_movement = sprint
+meet = meet@val_freedom_komand
+
+
+[meet@val_freedom_komand]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_freedom_forpost========
+[meet@forpost_freedom]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@val_a9_freedom_1]
+suitable = {=check_npc_name(val_a9_freedom_1)}
+prior = 200
+active = animpoint@val_a9_freedom_1
+
+[animpoint@val_a9_freedom_1]
+cover_name = val_a9_freedom_1_cover
+avail_animations = animpoint_stay_wall
+meet = meet@val_a9_freedom_1
+
+[meet@val_a9_freedom_1]:meet@forpost_freedom
+
+
+
+[logic@val_a9_freedom_2]
+suitable = {=check_npc_name(val_a9_freedom_2)}
+prior = 200
+active = animpoint@val_a9_freedom_2
+
+[animpoint@val_a9_freedom_2]
+cover_name = val_a9_freedom_2_cover
+avail_animations = jup_b10_drunk_ravings
+meet = no_meet
+
+
+
+[logic@val_a9_freedom_3]
+suitable = {=check_npc_name(val_a9_freedom_3)}
+prior = 200
+active = animpoint@val_a9_freedom_3
+
+[animpoint@val_a9_freedom_3]
+cover_name = val_a9_freedom_3_cover
+avail_animations = zat_b106_wounded_idle
+meet = no_meet
+
+
+
+[logic@val_a9_freedom_4]
+suitable = {=check_npc_name(val_a9_freedom_4)}
+prior = 200
+active = walker@val_a9_freedom_4
+
+[walker@val_a9_freedom_4]
+path_walk = freedom_1_walk
+path_look = freedom_1_look
+def_state_moving = patrol
+meet = meet@val_a9_freedom_4
+
+[meet@val_a9_freedom_4]:meet@forpost_freedom
+
+
+
+
+[logic@val_a9_freedom_5]
+suitable = {=check_npc_name(val_a9_freedom_5)}
+prior = 200
+active = walker@val_a9_freedom_5
+
+[walker@val_a9_freedom_5]
+path_walk = freedom_2_walk
+path_look = freedom_2_look
+def_state_moving = patrol
+meet = meet@val_a9_freedom_5
+
+[meet@val_a9_freedom_5]:meet@forpost_freedom
+
+
+
+
+[logic@val_a9_freedom_6]
+suitable = {=check_npc_name(val_a9_freedom_6)}
+prior = 200
+active = walker@val_a9_freedom_6
+
+[walker@val_a9_freedom_6]
+path_walk = freedom_3_walk
+path_look = freedom_3_look
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@val_a9_freedom_7]
+suitable = {=check_npc_name(val_a9_freedom_7)}
+prior = 200
+active = walker@val_a9_freedom_7
+
+[walker@val_a9_freedom_7]
+path_walk = freedom_4_walk
+path_look = freedom_4_look
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@val_a9_freedom_8]
+suitable = {=check_npc_name(val_a9_freedom_8)}
+prior = 200
+active = walker@val_a9_freedom_8
+
+[walker@val_a9_freedom_8]
+path_walk = freedom_5_walk
+path_look = freedom_5_look
+def_state_moving = patrol
+meet = meet@val_a9_freedom_8
+
+[meet@val_a9_freedom_8]:meet@forpost_freedom
+
+
+
+[logic@val_a9_freedom_9]
+suitable = {=check_npc_name(val_a9_freedom_9)}
+prior = 200
+active = walker@val_a9_freedom_9
+
+[walker@val_a9_freedom_9]
+path_walk = freedom_6_walk
+path_look = freedom_6_look
+def_state_standing = sleep
+meet = no_meet

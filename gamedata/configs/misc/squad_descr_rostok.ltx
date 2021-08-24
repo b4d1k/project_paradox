@@ -1,0 +1,39 @@
+; «десь содержатс€ дескрипшены сквадов, которые потом можно создавать использу€ спец функции.
+;-----------------------ROSTOK---------------------------------
+;-----------------------a4---------------------------------
+[ros_a4_duty_post_squad]:online_offline_group
+faction = dolg
+npc = ros_a4_duty_1
+target_smart = ros_a4
+spawn_point = ros_a4_spawn_point
+
+[ros_a4_duty_post_1_squad]:online_offline_group
+faction = dolg
+npc = ros_a4_duty_2, ros_a4_duty_3, ros_a4_duty_4
+target_smart = ros_a4
+spawn_point = ros_a4_spawn_point_1
+
+;-----------------------a6---------------------------------
+[ros_a6_duty_post_squad]:online_offline_group
+faction = dolg
+npc = ros_a6_duty_1, ros_a6_duty_2, ros_a6_duty_3, ros_a6_duty_4, ros_a6_duty_5
+target_smart = ros_a6
+spawn_point = ros_a6_spawn_point
+
+
+
+
+
+;-----------------------sim_1---------------------------------
+[ros_sim_1_monster_dog_squad]:online_offline_group
+faction = monster_predatory_day
+npc = pseudodog_normal, pseudodog_normal, dog_weak, dog_normal, dog_strong, dog_strong
+target_smart = ros_sim_1
+spawn_point = ros_sim_1_spawn_point
+
+;-----------------------sim_2---------------------------------
+[ros_sim_2_monster_snork_squad]:online_offline_group
+faction = monster_zombied_night
+npc = snork_weak, snork_normal, snork_strong, snork_strong
+target_smart = ros_sim_2
+spawn_point = ros_sim_2_spawn_point

@@ -1,0 +1,55 @@
+[logic@val_b47_bandit_hunter]
+active = walker@val_b47_bandit_hunter
+suitable = {=check_npc_name(val_b47_bandit_hunter)}
+prior = 200
+
+[walker@val_b47_bandit_hunter]
+path_walk = bandit_hunter_walk
+path_look = bandit_hunter_look
+def_state_moving = patrol
+meet = meet@val_b47_bandit_hunter
+
+
+[meet@val_b47_bandit_hunter]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+[logic@val_b47_bandit_1_hunter]
+active = walker@val_b47_bandit_1_hunter
+suitable = {=check_npc_name(val_b47_bandit_1_hunter)}
+prior = 200
+
+[walker@val_b47_bandit_1_hunter]
+path_walk = bandit_1_hunter_walk
+path_look = bandit_1_hunter_look
+def_state_moving = patrol
+meet = meet@val_b47_bandit_1_hunter
+
+
+[meet@val_b47_bandit_1_hunter]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+

@@ -1,0 +1,195 @@
+;=========meet_bandit_stroyka_1========
+[meet@stroyka_1_bandit]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@val_b18_bandit_1]
+suitable = {=check_npc_name(val_b18_bandit_1)}
+prior = 100
+active = walker@val_b18_bandit_1
+
+[walker@val_b18_bandit_1]
+path_walk = bandit_1_walk
+path_look = bandit_1_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_1
+
+[meet@val_b18_bandit_1]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_2]
+suitable = {=check_npc_name(val_b18_bandit_2)}
+prior = 100
+active = walker@val_b18_bandit_2
+
+[walker@val_b18_bandit_2]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_standing = binocular
+def_state_moving = patrol
+meet = meet@val_b18_bandit_2
+on_timer = 30000 | walker@val_b18_bandit_2_1
+
+[walker@val_b18_bandit_2_1]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = no_meet
+on_timer = 20000 | walker@val_b18_bandit_2
+
+[meet@val_b18_bandit_2]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_3]
+suitable = {=check_npc_name(val_b18_bandit_3)}
+prior = 100
+active = walker@val_b18_bandit_3
+
+[walker@val_b18_bandit_3]
+path_walk = bandit_3_walk
+path_look = bandit_3_look
+def_state_standing = guard
+def_state_moving = patrol
+meet = meet@val_b18_bandit_3
+on_timer = 30000 | walker@val_b18_bandit_3_1
+
+[walker@val_b18_bandit_3_1]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_standing = binocular
+def_state_moving = patrol
+meet = no_meet
+on_timer = 30000 | walker@val_b18_bandit_3
+
+[meet@val_b18_bandit_3]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_4]
+suitable = {=check_npc_name(val_b18_bandit_4)}
+prior = 100
+active = walker@val_b18_bandit_4
+
+[walker@val_b18_bandit_4]
+path_walk = bandit_4_walk
+path_look = bandit_4_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_4
+
+[meet@val_b18_bandit_4]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_5]
+suitable = {=check_npc_name(val_b18_bandit_5)}
+prior = 100
+active = walker@val_b18_bandit_5
+
+[walker@val_b18_bandit_5]
+path_walk = bandit_5_walk
+;path_look = bandit_4_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_5
+
+[meet@val_b18_bandit_5]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_6]
+suitable = {=check_npc_name(val_b18_bandit_6)}
+prior = 100
+active = walker@val_b18_bandit_6
+
+[walker@val_b18_bandit_6]
+path_walk = bandit_6_walk
+path_look = bandit_6_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_6
+
+[meet@val_b18_bandit_6]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_7]
+suitable = {=check_npc_name(val_b18_bandit_7)}
+prior = 100
+active = walker@val_b18_bandit_7
+
+[walker@val_b18_bandit_7]
+path_walk = bandit_7_walk
+path_look = bandit_7_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_7
+
+[meet@val_b18_bandit_7]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_8]
+suitable = {=check_npc_name(val_b18_bandit_8)}
+prior = 100
+active = walker@val_b18_bandit_8
+
+[walker@val_b18_bandit_8]
+path_walk = bandit_8_walk
+path_look = bandit_8_look
+def_state_moving = patrol
+meet = meet@val_b18_bandit_8
+
+[meet@val_b18_bandit_8]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_9]
+suitable = {=check_npc_name(val_b18_bandit_9)}
+prior = 100
+active = animpoint@val_b18_bandit_9
+
+[animpoint@val_b18_bandit_9]
+cover_name = val_b18_bandit_cover_1
+avail_animations = animpoint_sit_ass
+meet = meet@val_b18_bandit_9
+
+[meet@val_b18_bandit_9]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_10]
+suitable = {=check_npc_name(val_b18_bandit_10)}
+prior = 100
+active = animpoint@val_b18_bandit_10
+
+[animpoint@val_b18_bandit_10]
+cover_name = val_b18_bandit_cover_2
+avail_animations = animpoint_sit_normal
+reach_movement = sprint
+meet = meet@val_b18_bandit_10
+
+[meet@val_b18_bandit_10]:meet@stroyka_1_bandit
+
+
+
+[logic@val_b18_bandit_11]
+suitable = {=check_npc_name(val_b18_bandit_11)}
+prior = 100
+active = animpoint@val_b18_bandit_11
+
+[animpoint@val_b18_bandit_11]
+cover_name = val_b18_bandit_cover_3
+avail_animations = animpoint_stay_wall
+meet = meet@val_b18_bandit_11
+
+[meet@val_b18_bandit_11]:meet@stroyka_1_bandit

@@ -1,0 +1,186 @@
+;=========meet_bandit_vil========
+[meet@bandit_vil]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@blck_val_a31_bandit_1]
+suitable = {=check_npc_name(blck_val_a31_bandit_1)}
+prior = 100
+active = walker@blck_val_a31_bandit_1
+
+[walker@blck_val_a31_bandit_1]
+path_walk = bandit_1_walk
+path_look = bandit_1_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = meet@blck_val_a31_bandit_1
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_1]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_bandit_2]
+suitable = {=check_npc_name(blck_val_a31_bandit_2)}
+prior = 100
+active = walker@blck_val_a31_bandit_2
+
+[walker@blck_val_a31_bandit_2]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_moving = patrol
+meet = meet@blck_val_a31_bandit_2
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_2]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_bandit_3]
+suitable = {=check_npc_name(blck_val_a31_bandit_3)}
+prior = 100
+active = walker@blck_val_a31_bandit_3
+
+[walker@blck_val_a31_bandit_3]
+path_walk = bandit_3_walk
+path_look = bandit_3_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = meet@blck_val_a31_bandit_3
+on_timer = 30000 | walker@blck_val_a31_bandit_3_1
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[walker@blck_val_a31_bandit_3_1]
+path_walk = bandit_3_walk
+path_look = bandit_3_look
+def_state_standing = binocular
+def_state_moving = patrol
+meet = no_meet
+on_timer = 30000 | walker@blck_val_a31_bandit_3
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_3]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_bandit_4]
+suitable = {=check_npc_name(blck_val_a31_bandit_4)}
+prior = 100
+active = walker@blck_val_a31_bandit_4
+
+[walker@blck_val_a31_bandit_4]
+path_walk = bandit_4_walk
+path_look = bandit_4_look
+def_state_standing = sleep
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+
+
+[logic@blck_val_a31_bandit_5]
+suitable = {=check_npc_name(blck_val_a31_bandit_5)}
+prior = 100
+active = animpoint@blck_val_a31_bandit_5
+
+[animpoint@blck_val_a31_bandit_5]
+cover_name = blck_val_a31_bandit_cover_1
+avail_animations = animpoint_stay_table
+meet = meet@blck_val_a31_bandit_5
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_5]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_bandit_6]
+suitable = {=check_npc_name(blck_val_a31_bandit_6)}
+prior = 100
+active = animpoint@blck_val_a31_bandit_6
+
+[animpoint@blck_val_a31_bandit_6]
+cover_name = blck_val_a31_bandit_cover_2
+avail_animations = animpoint_stay_wall
+meet = meet@blck_val_a31_bandit_6
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_6]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_bandit_7]
+suitable = {=check_npc_name(blck_val_a31_bandit_7)}
+prior = 100
+active = animpoint@blck_val_a31_bandit_7
+
+[animpoint@blck_val_a31_bandit_7]
+cover_name = blck_val_a31_bandit_cover_3
+avail_animations = zat_b106_wounded_idle
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+
+
+[logic@blck_val_a31_bandit_8]
+suitable = {=check_npc_name(blck_val_a31_bandit_8)}
+prior = 100
+active = animpoint@blck_val_a31_bandit_8
+
+[animpoint@blck_val_a31_bandit_8]
+cover_name = blck_val_a31_bandit_cover_4
+avail_animations = jup_b10_drunk_ravings
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+
+
+[logic@blck_val_a31_bandit_9]
+suitable = {=check_npc_name(blck_val_a31_bandit_9)}
+prior = 100
+active = walker@blck_val_a31_bandit_9
+
+[walker@blck_val_a31_bandit_9]
+path_walk = bandit_9_walk
+path_look = bandit_9_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = meet@blck_val_a31_bandit_9
+combat_ignore_cond = {=check_enemy_name(blck_val_a31_stalker_1:blck_val_a31_stalker_2)} true
+
+[meet@blck_val_a31_bandit_9]:meet@bandit_vil
+
+
+
+[logic@blck_val_a31_stalker_1]
+suitable = {=check_npc_name(blck_val_a31_stalker_1)}
+prior = 100
+active = animpoint@blck_val_a31_stalker_1
+
+[animpoint@blck_val_a31_stalker_1]
+cover_name = blck_val_a31_stalker_cover_1
+avail_animations = animpoint_sit_ass
+combat_ignore_cond = true
+meet = no_meet
+
+
+
+[logic@blck_val_a31_stalker_2]
+suitable = {=check_npc_name(blck_val_a31_stalker_2)}
+prior = 100
+active = walker@blck_val_a31_stalker_2
+
+[walker@blck_val_a31_stalker_2]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = sleep
+combat_ignore_cond = true
+meet = no_meet

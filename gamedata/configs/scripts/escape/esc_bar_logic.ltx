@@ -1,0 +1,158 @@
+
+[logic@esc_bar_animp_1]
+active = animpoint@esc_bar_animp_1 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_2]
+active = animpoint@esc_bar_animp_2 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_3]
+active = animpoint@esc_bar_animp_3 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_4]
+active = animpoint@esc_bar_animp_4 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_5]
+active = animpoint@esc_bar_animp_5 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_6]
+active = animpoint@esc_bar_animp_6 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_7]
+active = animpoint@esc_bar_animp_7 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_8]
+active = animpoint@esc_bar_animp_8 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_9]
+active = animpoint@esc_bar_animp_9 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_10]
+active = animpoint@esc_bar_animp_10
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_11]
+active = animpoint@esc_bar_animp_11 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_12]
+active = animpoint@esc_bar_animp_12
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_13]
+active = animpoint@esc_bar_animp_13 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_14]
+active = animpoint@esc_bar_animp_14 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_15]
+active = animpoint@esc_bar_animp_15 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+[logic@esc_bar_animp_16]
+active = animpoint@esc_bar_animp_16 
+suitable = {=check_npc_name(sim_default) =npc_in_zone(esc_underground_bar_restrictor)} true
+prior = 100
+
+
+[meet@zat_a2_animpoint_meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+[animpoint@esc_bar_animp_gen]
+reach_movement = walk_noweap
+use_camp = true
+meet = meet@esc_bar_animpoint_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+out_restr = esc_underground_bar_restrictor
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[animpoint@esc_bar_animp_gen_reach]:animpoint@esc_bar_animp_gen
+combat_ignore_keep_when_attacked = false
+invulnerable = false
+
+
+[animpoint@esc_bar_animp_1]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral
+
+[animpoint@esc_bar_animp_2]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0000
+
+[animpoint@esc_bar_animp_3]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0001
+
+[animpoint@esc_bar_animp_4]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0002
+
+[animpoint@esc_bar_animp_5]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0003
+
+[animpoint@esc_bar_animp_6]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0004
+
+[animpoint@esc_bar_animp_7]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0005
+
+[animpoint@esc_bar_animp_8]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0006
+
+[animpoint@esc_bar_animp_9]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0007
+
+[animpoint@esc_bar_animp_10]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0008
+
+[animpoint@esc_bar_animp_11]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0009
+
+[animpoint@esc_bar_animp_12]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0010
+
+[animpoint@esc_bar_animp_13]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0011
+
+[animpoint@esc_bar_animp_14]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0012
+
+[animpoint@esc_bar_animp_15]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0013
+
+[animpoint@esc_bar_animp_16]:animpoint@esc_bar_animp_gen_reach
+cover_name = esc_underground_bar_neutral_0014
+

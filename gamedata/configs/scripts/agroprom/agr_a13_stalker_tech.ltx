@@ -1,0 +1,37 @@
+[logic@agr_a13_stalker_tech]
+active = walker@agr_a13_stalker_tech
+suitable = {=check_npc_name(agr_a13_stalker_tech)}
+prior = 200
+can_select_weapon = false
+level_spot = mechanic
+
+
+[walker@agr_a13_stalker_tech]
+path_walk = stalker_tech_walk
+path_look = stalker_tech_look
+def_state_standing = wait
+meet = meet@agr_a13_stalker_tech
+use_camp = false
+reach_distance = 1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+
+[meet@agr_a13_stalker_tech]
+close_snd_hello = jup_b217_stalker_tech_greeting
+close_snd_bye 	= jup_b217_stalker_tech_farewell
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false

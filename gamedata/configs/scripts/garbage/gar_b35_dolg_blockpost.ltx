@@ -1,0 +1,160 @@
+[logic@gar_b35_dolg_1]
+suitable = {=check_npc_name(gar_b35_dolg_1)}
+prior = 200
+active = animpoint@gar_b35_dolg_1
+
+[animpoint@gar_b35_dolg_1]
+cover_name = gar_b35_duty_cover_1
+avail_animations = animpoint_sit_normal
+meet = meet@gar_b35_dolg_1
+
+
+[meet@gar_b35_dolg_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+
+[logic@gar_b35_dolg_2]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_2
+
+[walker@gar_b35_dolg_2]
+path_walk = duty_1_walk
+path_look = duty_1_look
+def_state_standing = guard
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@gar_b35_dolg_3]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_3
+
+[walker@gar_b35_dolg_3]
+path_walk = duty_2_walk
+path_look = duty_2_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@gar_b35_dolg_4]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_4
+
+[walker@gar_b35_dolg_4]
+path_walk = duty_3_walk
+path_look = duty_3_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@gar_b35_dolg_5]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_5
+
+[walker@gar_b35_dolg_5]
+path_walk = duty_4_walk
+path_look = duty_4_look
+def_state_standing = guard
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@gar_b35_dolg_6]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_6
+
+[walker@gar_b35_dolg_6]
+path_walk = duty_5_walk
+path_look = duty_5_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = no_meet
+
+
+
+[logic@gar_b35_dolg_7]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_7
+
+[walker@gar_b35_dolg_7]
+path_walk = duty_6_walk
+path_look = duty_6_look
+def_state_standing = binocular
+def_state_moving = patrol
+meet = no_meet
+on_timer = 30000 | walker@gar_b35_dolg_7_1
+
+[walker@gar_b35_dolg_7_1]
+path_walk = duty_6_walk
+path_look = duty_6_look
+def_state_standing = guard
+def_state_moving = patrol
+meet = no_meet
+on_timer = 30000 | walker@gar_b35_dolg_7
+
+
+
+[logic@gar_b35_dolg_8]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = walker@gar_b35_dolg_8
+
+[walker@gar_b35_dolg_8]
+path_walk = duty_7_walk
+path_look = duty_7_look
+def_state_standing = wait
+def_state_moving = patrol
+use_camp = true
+meet = no_meet
+
+
+
+;[logic@gar_b35_dolg_9]
+;suitable = {=npc_community(dolg)} true
+;prior = 200
+;active = walker@gar_b35_dolg_9
+
+;[walker@gar_b35_dolg_9]
+;path_walk = duty_8_walk
+;path_look = duty_8_look
+;def_state_standing = sleep
+;def_state_moving = patrol
+;meet = no_meet
+
+
+
+[logic@gar_b35_dolg_10]
+suitable = {=npc_community(dolg)} true
+prior = 200
+active = animpoint@gar_b35_dolg_10
+
+[animpoint@gar_b35_dolg_10]
+cover_name = gar_b35_duty_cover_2
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = no_meet

@@ -1,0 +1,102 @@
+[meet@stalker_prototype]
+close_snd_hello = zat_b30_owl_stalker_trader_greeting
+close_snd_bye = zat_b30_owl_stalker_trader_farewell
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+;-----------------------------------------------
+
+[logic@val_a7_stalker_prototype]
+suitable = {=check_npc_name(val_a7_stalker_prototype)}
+prior = 200
+active = walker@st_prototype_1
+
+[walker@st_prototype_1]
+path_walk = stalker_prototype_walk
+path_look = stalker_prototype_look
+def_state_standing = probe_stand
+def_state_moving = patrol
+meet = no_meet
+on_timer = 50000 | walker@st_prototype_2
+
+[walker@st_prototype_2]
+path_walk = stalker_prototype_walk1
+path_look = stalker_prototype_look1
+;def_state_standing = probe_stand
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_3
+
+[walker@st_prototype_3]
+path_walk = stalker_prototype_walk2
+path_look = stalker_prototype_look2
+def_state_standing = probe_stand
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_4
+
+[walker@st_prototype_4]
+path_walk = stalker_prototype_walk3
+path_look = stalker_prototype_look3
+def_state_standing = probe_crouch
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_5
+
+[walker@st_prototype_5]
+path_walk = stalker_prototype_walk4
+path_look = stalker_prototype_look4
+def_state_standing = probe_way
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_6
+
+[walker@st_prototype_6]
+path_walk = stalker_prototype_walk5
+path_look = stalker_prototype_look5
+def_state_standing = probe_stand
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_7
+
+[walker@st_prototype_7]
+path_walk = stalker_prototype_walk6
+path_look = stalker_prototype_look6
+def_state_standing = probe_crouch
+def_state_moving = patrol
+meet = no_meet
+on_timer = 100000 | walker@st_prototype_8
+
+[walker@st_prototype_8]
+path_walk = stalker_prototype_walk7
+;path_look = stalker_prototype_look6
+;def_state_standing = probe_crouch
+def_state_moving = patrol
+meet = no_meet
+on_timer = 80000 | walker@st_prototype_9
+on_info = {!is_day} | walker@st_prototype_sleep
+
+[walker@st_prototype_9]
+path_walk = stalker_prototype_walk8
+path_look = stalker_prototype_look8
+def_state_standing = binocular
+def_state_moving = patrol
+meet = meet@stalker_prototype
+on_timer = 110000 | walker@st_prototype_1
+on_info = {!is_day} | walker@st_prototype_sleep
+
+
+
+[walker@st_prototype_sleep]
+path_walk = stalker_prototype_sl_walk
+path_look = stalker_prototype_sl_look
+def_state_standing = sleep
+meet = no_meet
+on_info = {=is_day} | walker@st_prototype_1

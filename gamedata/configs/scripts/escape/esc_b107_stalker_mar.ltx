@@ -1,0 +1,38 @@
+[logic@esc_b107_stalker_1]
+suitable = {=check_npc_name(esc_b107_stalker_1)}
+prior = 200
+active = walker@esc_b107_stalker_1
+
+[walker@esc_b107_stalker_1]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = hide
+meet = no_meet
+
+
+
+
+[logic@esc_b107_stalker_2]
+suitable = {=npc_community(stalker)} true
+prior = 200
+active = walker@esc_b107_stalker_2
+
+[walker@esc_b107_stalker_2]
+path_walk = stalker_2_walk
+path_look = stalker_2_look
+def_state_standing = hide_na
+meet = no_meet
+
+
+
+
+[logic@esc_b107_stalker_3]
+suitable = {=npc_community(stalker)} true
+prior = 200
+active = walker@esc_b107_stalker_3
+
+[walker@esc_b107_stalker_3]
+path_walk = stalker_3_walk
+path_look = stalker_3_look
+def_state_standing = hide
+meet = no_meet

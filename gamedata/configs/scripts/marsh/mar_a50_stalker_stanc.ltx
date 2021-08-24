@@ -1,0 +1,96 @@
+;---Командир
+[logic@mar_a50_csky_kom]
+suitable = {=check_npc_name(mar_a50_csky_kom)} true
+prior = 200
+active = walker@mar_a50_csky_kom
+
+[walker@mar_a50_csky_kom]
+path_walk = csky_1_walk
+path_look = csky_1_look
+def_state_standing = ward
+meet = meet@mar_a50_csky_kom
+
+
+[meet@mar_a50_csky_kom]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_stanc_stalker========
+[meet@stanc_stalker]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@mar_a50_stalker_1]
+suitable = {=check_npc_name(mar_a50_stalker_1)}
+prior = 200
+active = walker@mar_a50_stalker_1
+
+[walker@mar_a50_stalker_1]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = guard_chasovoy
+meet = meet@mar_a50_stalker_1
+
+[meet@mar_a50_stalker_1]:meet@stanc_stalker
+
+
+
+[logic@mar_a50_stalker_2]
+suitable = {=check_npc_name(mar_a50_stalker_2)}
+prior = 200
+active = walker@mar_a50_stalker_2
+
+[walker@mar_a50_stalker_2]
+path_walk = stalker_2_walk
+path_look = stalker_2_look
+def_state_standing = guard
+meet = meet@mar_a50_stalker_2
+
+[meet@mar_a50_stalker_2]:meet@stanc_stalker
+
+
+
+[logic@mar_a50_stalker_3]
+suitable = {=check_npc_name(mar_a50_stalker_3)}
+prior = 200
+active = walker@mar_a50_stalker_3
+
+[walker@mar_a50_stalker_3]
+path_walk = stalker_3_walk
+path_look = stalker_3_look
+def_state_standing = binocular
+meet = meet@mar_a50_stalker_3
+
+[meet@mar_a50_stalker_3]:meet@stanc_stalker
+
+
+
+[logic@mar_a50_stalker_4]
+suitable = {=check_npc_name(mar_a50_stalker_4)}
+prior = 200
+active = walker@mar_a50_stalker_4
+
+[walker@mar_a50_stalker_4]
+path_walk = stalker_4_walk
+;path_look = stalker_4_look
+def_state_moving = patrol
+meet = no_meet

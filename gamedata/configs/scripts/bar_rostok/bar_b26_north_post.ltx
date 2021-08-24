@@ -1,0 +1,79 @@
+;---Командир
+[logic@bar_b26_duty_kom]
+suitable = {=check_npc_name(bar_b26_duty_kom)} true
+prior = 200
+active = walker@bar_b26_duty_kom
+
+[walker@bar_b26_duty_kom]
+path_walk = duty_north_kom_walk
+path_look = duty_north_kom_look
+def_state_standing = ward
+meet = meet@bar_b26_duty_kom
+
+
+[meet@bar_b26_duty_kom]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_north_post_duty========
+[meet@north_post_duty]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@bar_b26_duty_1]
+suitable = {=check_npc_name(bar_b26_duty_1)}
+prior = 200
+active = walker@bar_b26_duty_1
+
+[walker@bar_b26_duty_1]
+path_walk = duty_1_walk
+path_look = duty_1_look
+def_state_standing = guard_chasovoy
+meet = meet@bar_b26_duty_1
+
+[meet@bar_b26_duty_1]:meet@north_post_duty
+
+
+
+[logic@bar_b26_duty_2]
+suitable = {=check_npc_name(bar_b26_duty_2)}
+prior = 200
+active = walker@bar_b26_duty_2
+
+[walker@bar_b26_duty_2]
+path_walk = duty_2_walk
+path_look = duty_2_look
+def_state_standing = guard
+meet = no_meet
+
+
+
+[logic@bar_b26_duty_3]
+suitable = {=check_npc_name(bar_b26_duty_3)}
+prior = 200
+active = walker@bar_b26_duty_3
+
+[walker@bar_b26_duty_3]
+path_walk = duty_3_walk
+path_look = duty_3_look
+def_state_standing = binocular
+meet = no_meet

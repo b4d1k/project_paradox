@@ -1,0 +1,194 @@
+;---Охотник
+[logic@bar_a103_stalker_hunt]
+suitable = {=check_npc_name(bar_a103_stalker_hunt)} true
+prior = 200
+active = animpoint@bar_a103_stalker_hunt
+
+[animpoint@bar_a103_stalker_hunt]
+cover_name = bar_a103_hunter_cover
+avail_animations = animpoint_sit_normal
+meet = meet@bar_a103_stalker_hunt
+use_camp = false
+reach_distance = 1
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+
+[meet@bar_a103_stalker_hunt]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+
+
+;=========meet_baza_stalkers========
+[meet@baza_stalker_duty]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@bar_a103_baza_stalker_1]
+suitable = {=check_npc_name(bar_a103_baza_stalker_1)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_1
+
+[animpoint@bar_a103_baza_stalker_1]
+cover_name = bar_a103_stalker_cover_1
+avail_animations = animpoint_sit_normal_weapon
+use_camp = false
+meet = meet@bar_a103_baza_stalker_1
+
+[meet@bar_a103_baza_stalker_1]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_2]
+suitable = {=check_npc_name(bar_a103_baza_stalker_2)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_2
+
+[animpoint@bar_a103_baza_stalker_2]
+cover_name = bar_a103_stalker_cover_2
+avail_animations = animpoint_sit_high
+use_camp = false
+meet = meet@bar_a103_baza_stalker_2
+
+[meet@bar_a103_baza_stalker_2]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_3]
+suitable = {=check_npc_name(bar_a103_baza_stalker_3)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_3
+
+[animpoint@bar_a103_baza_stalker_3]
+cover_name = bar_a103_stalker_cover_3
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@bar_a103_baza_stalker_3
+
+[meet@bar_a103_baza_stalker_3]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_4]
+suitable = {=check_npc_name(bar_a103_baza_stalker_4)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_4
+
+[animpoint@bar_a103_baza_stalker_4]
+cover_name = bar_a103_stalker_cover_4
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = meet@bar_a103_baza_stalker_4
+
+[meet@bar_a103_baza_stalker_4]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_5]
+suitable = {=check_npc_name(bar_a103_baza_stalker_5)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_5
+
+[animpoint@bar_a103_baza_stalker_5]
+cover_name = bar_a103_stalker_cover_5
+avail_animations = animpoint_sit_normal_guitar
+use_camp = true
+meet = meet@bar_a103_baza_stalker_5
+
+[meet@bar_a103_baza_stalker_5]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_6]
+suitable = {=check_npc_name(bar_a103_baza_stalker_6)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_6
+
+[animpoint@bar_a103_baza_stalker_6]
+cover_name = bar_a103_stalker_cover_6
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = meet@bar_a103_baza_stalker_6
+
+[meet@bar_a103_baza_stalker_6]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_7]
+suitable = {=check_npc_name(bar_a103_baza_stalker_7)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_7
+
+[animpoint@bar_a103_baza_stalker_7]
+cover_name = bar_a103_stalker_cover_7
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@bar_a103_baza_stalker_7
+
+[meet@bar_a103_baza_stalker_7]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_9]
+suitable = {=check_npc_name(bar_a103_baza_stalker_9)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_9
+
+[animpoint@bar_a103_baza_stalker_9]
+cover_name = bar_a103_stalker_cover_8
+avail_animations = animpoint_sit_ass
+use_camp = true
+meet = meet@bar_a103_baza_stalker_9
+
+[meet@bar_a103_baza_stalker_9]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_10]
+suitable = {=check_npc_name(bar_a103_baza_stalker_10)}
+prior = 200
+active = animpoint@bar_a103_baza_stalker_10
+
+[animpoint@bar_a103_baza_stalker_10]
+cover_name = bar_a103_stalker_cover_9
+avail_animations = animpoint_sit_knee
+use_camp = true
+meet = meet@bar_a103_baza_stalker_10
+
+[meet@bar_a103_baza_stalker_10]:meet@baza_stalker_duty
+
+
+
+[logic@bar_a103_baza_stalker_8]
+suitable = {=check_npc_name(bar_a103_baza_stalker_8)}
+prior = 200
+active = walker@bar_a103_baza_stalker_8
+
+[walker@bar_a103_baza_stalker_8]
+path_walk = duty_1_walk
+;path_look = duty_1_look
+def_state_moving = patrol
+meet = no_meet

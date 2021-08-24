@@ -1,0 +1,54 @@
+;=========meet_stalker_tynel========
+[meet@tynel_stalker]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+[logic@agr_a11_stalker_1]
+suitable = {=check_npc_name(agr_a11_stalker_1)} true
+prior = 100
+active = animpoint@agr_a11_stalker_1
+
+[animpoint@agr_a11_stalker_1]
+cover_name = agr_a11_stalker_cover
+avail_animations = animpoint_sit_ass
+meet = meet@agr_a11_stalker_1
+
+[meet@agr_a11_stalker_1]:meet@tynel_stalker
+
+
+
+[logic@agr_a11_stalker_2]
+suitable = {=check_npc_name(agr_a11_stalker_2)}
+prior = 100
+active = walker@agr_a11_stalker_2
+
+[walker@agr_a11_stalker_2]
+path_walk = stalker_1_walk
+path_look = stalker_1_look
+def_state_standing = guard_chasovoy
+def_state_moving = patrol
+meet = meet@agr_a11_stalker_2
+
+[meet@agr_a11_stalker_2]:meet@tynel_stalker
+
+
+
+[logic@agr_a11_stalker_3]
+suitable = {=check_npc_name(agr_a11_stalker_3)}
+prior = 200
+active = walker@agr_a11_stalker_3
+
+[walker@agr_a11_stalker_3]
+path_walk = stalker_sleep_walk
+path_look = stalker_sleep_look
+def_state_standing = sleep
+meet = no_meet

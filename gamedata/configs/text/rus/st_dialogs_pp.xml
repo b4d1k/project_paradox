@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<string_table>
+    <string id="esc_razlom_hello_0">
+        <text>Привет! Если вдруг тебе нужна моя помощь, только скажи. Или ты пришел по другому поводу?</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_0">
+        <text>Чего тебе надо от меня?</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_1">
+        <text>У тебя еще остался хабар?</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_10">
+        <text>Ну раз такое дело, то... Ладно. Вот тебе хабар, неси куда его надо и больше не трогай меня. Всё таки я имею право побыть один, не так ли?</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_11">
+        <text>Ладно, я пошёл.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_2">
+        <text>Какой ещё хабар? И вообще, зачем тебе нужен мой хабар? Хочешь заработать на перепродаже? Ничего у тебя не выйдет.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_3">
+        <text>Забавно, сначала говоришь какой хабар, а потом говоришь зачем он мне.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_4">
+        <text>Ещё хоть слово скажешь - я тебя на фарш пущу.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_5">
+        <text>Спокойно, спокойно. У тебя остался хабар для Сидоровича?</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_51">
+        <text>%c[red][Напасть] %c[white]Ну, как хочешь.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_6">
+        <text>Да, остался. Опять ограбить меня хотите, да? Не выйдет ничего у вас, не выйдет.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_7">
+        <text>Я пришел за твоим хабаром для Толика, а не для ограблений.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_8">
+        <text>А кто такой этот твой Толик? Ни разу о нём не слышал.</text>
+    </string>
+    <string id="esc_stalker_tolik_task_habar_9">
+        <text>Зато ты наверняка слышал про уход Сидоровича. Если Сидорович ушёл, кто будет торговать? И вот Толик решил стать торговцем. Ему как раз не хватает хабара на торговлю, и он послал меня к тебе.</text>
+    </string>
+    <string id="esc_tolik_hello_0">
+        <text>Хочешь что-то купить?</text>
+    </string>
+    <string id="esc_tolik_task_0">
+        <text>О чём думаешь?</text>
+    </string>
+    <string id="esc_tolik_task_1">
+        <text>Скорее всего ты в курсе, что Сидорович ушел отсюда. Он был торговцем с кучей связей. Однако что-то заставило его уйти. Я решил стать торговцем, однако ассортимент у меня не богатый. Не мог бы ты принести хабара?</text>
+    </string>
+    <string id="esc_tolik_task_2">
+        <text>Какого хабара?</text>
+    </string>
+    <string id="esc_tolik_task_3">
+        <text>Я слышал, что Сидоровичу как раз недавно один сталкер решил принести хабар, но в тот самый момент Сидорович уже ушёл. С тех пор хабар скорее всего остался у него, но возможно и то, что он уже продал его. Я тебе дам на него метку в КПК. Только заранее дам совет: перед походом разгрузись.</text>
+    </string>
+    <string id="esc_tolik_task_4">
+        <text>Хорошо, принесу.</text>
+    </string>
+    <string id="esc_tolik_task_41">
+        <text>Извини, пока не могу.</text>
+    </string>
+    <string id="esc_tolik_task_51">
+        <text>Скажешь, когда сможешь.</text>
+    </string>
+    <string id="esc_tolik_task_end_0">
+        <text>Насчет хабара...</text>
+    </string>
+    <string id="esc_tolik_task_end_1">
+        <text>Ты принёс хабар?</text>
+    </string>
+    <string id="esc_tolik_task_end_2">
+        <text>Я принёс хабар.</text>
+    </string>
+    <string id="esc_tolik_task_end_21">
+        <text>Извини, я ещё его не принёс.</text>
+    </string>
+    <string id="esc_tolik_task_end_22">
+        <text>Я принёс хабар.</text>
+    </string>
+    <string id="esc_tolik_task_end_3">
+        <text>Вот и отлично. Спасибо тебе, теперь я смогу продавать вещи получше. Вот твоя награда.</text>
+    </string>
+    <string id="razlom_prosnulsya_0">
+        <text>Наконец-то ты проснулся. Я как раз ехал в одной машине с тобой. У меня хорошие навыки врача. Как ты?</text>
+    </string>
+    <string id="razlom_prosnulsya_1">
+        <text>Нормально.</text>
+    </string>
+    <string id="razlom_prosnulsya_2">
+        <text>Ну, хоть и не идеально, но симптомов серьезных болезней не наблюдается. Теперь твоя очередь задавать вопросы.</text>
+    </string>
+    <string id="razlom_prosnulsya_21">
+        <text>Ну, хоть и не идеально, но симптомов серьезных болезней не наблюдается. Теперь твоя очередь задавать вопросы.</text>
+    </string>
+    <string id="razlom_prosnulsya_22">
+        <text>Ну, я старался как мог. Даже хорошие врачи иногда ошибаются. Но ты хотя-бы живой и на ногах стоишь. Задавай свои вопросы, если хочешь.</text>
+    </string>
+    <string id="razlom_prosnulsya_3">
+        <text>Кто ты?</text>
+    </string>
+    <string id="razlom_prosnulsya_31">
+        <text>Где мы?</text>
+    </string>
+    <string id="razlom_prosnulsya_33">
+        <text>У меня нет вопросов.</text>
+    </string>
+    <string id="razlom_prosnulsya_4">
+        <text>Я Разлом. Раньше я работал в Киеве одним из врачей. Однажды мне стали платить слишком малую зарплату, и я уволился. Потом я услышал про Зону и решил узнать о ней поподробнее. Потом я смог стать наёмником. Я выполнял заказы и получал большие деньги. Однако в один моменты меня засекли военные и начали везти меня в тюрьму. Попутно поймали и тебя. Но вдруг колеса лопнули и Уаз врезался в дерево и водитель вместе с охранником умер. Нам как раз удалось вырваться живыми, так как мы были сзади, а не спереди.</text>
+    </string>
+    <string id="razlom_prosnulsya_41">
+        <text>Мы располагаемся в данный момент на Кордоне, в Деревне новичков. Однако здесь уже никого нет. Также рядом с Деревней новичков располагался бункер торговца по имени Сидорович. Бункер на прежнем месте, но Сидоровича там уже нету. Вроде там была какая-то записка, но я еще не посмотрел её.</text>
+    </string>
+    <string id="razlom_prosnulsya_43">
+        <text>Ну если у тебя нет вопросов, то тогда можешь исследовать местный округ. Только будь осторожен, Зона не прощает ошибок. Кстати, а что привело тебя сюда? Хотя... Ладно, можешь заняться своими делами.</text>
+    </string>
+    <string id="razlom_prosnulsya_5">
+        <text>Ладно.</text>
+    </string>
+</string_table>

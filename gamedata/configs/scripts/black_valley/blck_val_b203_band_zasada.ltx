@@ -1,0 +1,70 @@
+[logic@blck_val_b203_bandit_1]
+suitable = {=check_npc_name(blck_val_b203_bandit_1)}
+prior = 100
+active = walker@blck_val_b203_bandit_1
+
+[walker@blck_val_b203_bandit_1]
+path_walk = bandit_1_walk
+path_look = bandit_1_look
+def_state_standing = threat
+def_state_moving = patrol
+meet = meet@blck_val_b203_bandit_1
+combat_ignore_cond = {=check_enemy_name(blck_val_b203_stalker)} true
+
+[meet@blck_val_b203_bandit_1]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false
+
+
+
+
+[logic@blck_val_b203_bandit_2]
+suitable = {=check_npc_name(blck_val_b203_bandit_2)}
+prior = 100
+active = walker@blck_val_b203_bandit_2
+
+[walker@blck_val_b203_bandit_2]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_standing = hide
+def_state_moving = patrol
+meet = no_meet
+combat_ignore_cond = {=check_enemy_name(blck_val_b203_stalker)} true
+
+
+
+
+[logic@blck_val_b203_stalker]
+suitable = {=check_npc_name(blck_val_b203_stalker)}
+prior = 100
+active = smartcover@blck_val_b203_stalker
+
+[smartcover@blck_val_b203_stalker]
+cover_name = blck_val_b203_stalker_cover
+;avail_animations = crouch_front_left
+meet = meet@blck_val_b203_stalker
+combat_ignore_cond = {=check_enemy_name(blck_val_b203_bandit_1:blck_val_b203_bandit_2)} true
+
+[meet@blck_val_b203_stalker]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use 			= nil
+close_snd_hello = nil
+trade_enable    = false
+allow_break 	= false
+meet_on_talking = false

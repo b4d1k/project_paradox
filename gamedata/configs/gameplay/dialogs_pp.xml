@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="esc_razlom_hello">
+        <phrase_list>
+            <phrase id="0">
+                <text>esc_razlom_hello_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="razlom_prosnulsya">
+        <dont_has_info>esc_razlom_dialog_end</dont_has_info>
+        <phrase_list>
+            <phrase id="22">
+                <text>razlom_prosnulsya_22</text>
+            </phrase>
+            <phrase id="21">
+                <text>razlom_prosnulsya_21</text>
+            </phrase>
+            <phrase id="1">
+                <text>razlom_prosnulsya_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>razlom_prosnulsya_2</text>
+                <next>3</next>
+                <next>31</next>
+                <next>33</next>
+            </phrase>
+            <phrase id="43">
+                <text>razlom_prosnulsya_43</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="31">
+                <text>razlom_prosnulsya_31</text>
+                <next>41</next>
+            </phrase>
+            <phrase id="3">
+                <text>razlom_prosnulsya_3</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="0">
+                <text>razlom_prosnulsya_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="5">
+                <text>razlom_prosnulsya_5</text>
+                <action>dialogs.break_dialog</action>
+                <action>dialogs_pp.give_first_storyline_quest</action>
+                <give_info>esc_razlom_dialog_end</give_info>
+            </phrase>
+            <phrase id="33">
+                <text>razlom_prosnulsya_33</text>
+                <next>43</next>
+            </phrase>
+            <phrase id="41">
+                <text>razlom_prosnulsya_41</text>
+            </phrase>
+            <phrase id="4">
+                <text>razlom_prosnulsya_4</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="esc_tolik_hello">
+        <phrase_list>
+            <phrase id="0">
+                <text>esc_tolik_hello_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="esc_stalker_tolik_task_habar">
+        <phrase_list>
+            <phrase id="1">
+                <text>esc_stalker_tolik_task_habar_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>esc_stalker_tolik_task_habar_2</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>esc_stalker_tolik_task_habar_3</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="51">
+                <text>esc_stalker_tolik_task_habar_51</text>
+                <action>dialogs_pp.habar_stalker_enemy</action>
+            </phrase>
+            <phrase id="5">
+                <text>esc_stalker_tolik_task_habar_5</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="4">
+                <text>esc_stalker_tolik_task_habar_4</text>
+                <next>5</next>
+                <next>51</next>
+            </phrase>
+            <phrase id="6">
+                <text>esc_stalker_tolik_task_habar_6</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>esc_stalker_tolik_task_habar_7</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>esc_stalker_tolik_task_habar_8</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>esc_stalker_tolik_task_habar_9</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="0">
+                <text>esc_stalker_tolik_task_habar_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="11">
+                <text>esc_stalker_tolik_task_habar_11</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="10">
+                <text>esc_stalker_tolik_task_habar_10</text>
+                <action>dialogs_pp.give_stalker_habar</action>
+                <give_info>esc_tolik_task_habar_have_peaceful</give_info>
+                <next>11</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="esc_tolik_task">
+        <phrase_list>
+            <phrase id="1">
+                <text>esc_tolik_task_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>esc_tolik_task_2</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="4">
+                <text>esc_tolik_task_4</text>
+                <action>dialogs.break_dialog</action>
+                <give_info>esc_tolik_task_started</give_info>
+            </phrase>
+            <phrase id="41">
+                <text>esc_tolik_task_41</text>
+                <next>51</next>
+            </phrase>
+            <phrase id="51">
+                <text>esc_tolik_task_51</text>
+            </phrase>
+            <phrase id="3">
+                <text>esc_tolik_task_3</text>
+                <next>4</next>
+                <next>41</next>
+            </phrase>
+            <phrase id="0">
+                <text>esc_tolik_task_0</text>
+                <next>1</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="esc_tolik_task_end">
+        <has_info>esc_tolik_task_started</has_info>
+        <phrase_list>
+            <phrase id="1">
+                <text>esc_tolik_task_end_1</text>
+                <next>2</next>
+                <next>21</next>
+                <next>22</next>
+            </phrase>
+            <phrase id="21">
+                <text>esc_tolik_task_end_21</text>
+            </phrase>
+            <phrase id="22">
+                <text>esc_tolik_task_end_22</text>
+                <goodwill>50</goodwill>
+                <precondition>dialogs_pp.check_tolik_habar_have</precondition>
+                <has_info>esc_tolik_task_habar_have_peaceful</has_info>
+                <next>3</next>
+            </phrase>
+            <phrase id="0">
+                <text>esc_tolik_task_end_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="2">
+                <text>esc_tolik_task_end_2</text>
+                <goodwill>20</goodwill>
+                <precondition>dialogs_pp.check_tolik_habar_have</precondition>
+                <dont_has_info>esc_tolik_task_habar_have_peaceful</dont_has_info>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>esc_tolik_task_end_3</text>
+                <action>dialogs_pp.tolik_task_nagrada_give</action>
+                <disable_info>esc_tolik_task_started</disable_info>
+                <give_info>esc_tolik_task_end</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+</game_dialogs>

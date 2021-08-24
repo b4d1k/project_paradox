@@ -1,0 +1,89 @@
+;=========meet_lager_bandit========
+[meet@lager_bandit]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance 	= 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+;==================================
+
+
+
+[logic@dsc_b19_bandit_1]
+suitable = {=check_npc_name(dsc_b19_bandit_1)} true
+prior = 200
+active = animpoint@dsc_b19_bandit_1
+
+[animpoint@dsc_b19_bandit_1]
+cover_name = dsc_b19_bandit_cover
+avail_animations = animpoint_stay_wall_drink_vodka
+meet = meet@dsc_b19_bandit_1
+
+[meet@dsc_b19_bandit_1]:meet@lager_bandit
+
+
+[logic@dsc_b19_bandit_2]
+suitable = {=check_npc_name(dsc_b19_bandit_2)} true
+prior = 200
+active = animpoint@dsc_b19_bandit_2
+
+[animpoint@dsc_b19_bandit_2]
+cover_name = dsc_b19_bandit_cover_1
+avail_animations = animpoint_sit_normal_weapon
+meet = meet@dsc_b19_bandit_2
+
+[meet@dsc_b19_bandit_2]:meet@lager_bandit
+
+
+[logic@dsc_b19_bandit_3]
+suitable = {=check_npc_name(dsc_b19_bandit_3)} true
+prior = 200
+active = walker@dsc_b19_bandit_3
+
+[walker@dsc_b19_bandit_3]
+path_walk = bandit_1_walk
+path_look = bandit_1_look
+def_state_moving = patrol
+meet = no_meet
+
+
+[logic@dsc_b19_bandit_4]
+suitable = {=check_npc_name(dsc_b19_bandit_4)} true
+prior = 200
+active = walker@dsc_b19_bandit_4
+
+[walker@dsc_b19_bandit_4]
+path_walk = bandit_2_walk
+path_look = bandit_2_look
+def_state_moving = patrol
+meet = no_meet
+
+
+[logic@dsc_b19_bandit_5]
+suitable = {=check_npc_name(dsc_b19_bandit_5)} true
+prior = 200
+active = walker@dsc_b19_bandit_5
+
+[walker@dsc_b19_bandit_5]
+path_walk = bandit_3_walk
+path_look = bandit_3_look
+def_state_moving = patrol
+meet = meet@dsc_b19_bandit_5
+
+[meet@dsc_b19_bandit_5]:meet@lager_bandit
+
+
+[logic@dsc_b19_bandit_6]
+suitable = {=check_npc_name(dsc_b19_bandit_6)} true
+prior = 200
+active = walker@dsc_b19_bandit_6
+
+[walker@dsc_b19_bandit_6]
+path_walk = bandit_4_walk
+path_look = bandit_4_look
+def_state_moving = patrol
+meet = no_meet

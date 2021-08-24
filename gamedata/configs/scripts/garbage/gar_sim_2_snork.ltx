@@ -1,0 +1,62 @@
+[logic@gar_sim_2_snork1]
+active = mob_home@gar_sim_2_snork1
+suitable = {=is_monster_snork} true
+monster_job = true
+prior = 120
+
+[mob_home@gar_sim_2_snork1]
+path_home = snork_home_1
+home_min_radius = 60
+home_max_radius = 90
+on_info = {=has_enemy} mob_home@gar_sim_2_snork1_fight
+
+[mob_home@gar_sim_2_snork1_fight]
+path_home = snork_home_1
+home_min_radius = 90
+home_max_radius = 130
+aggressive = true
+on_info = {!has_enemy} mob_home@gar_sim_2_snork1
+
+
+
+
+[logic@gar_sim_2_snork2]
+active = mob_home@gar_sim_2_snork2
+suitable = {=is_monster_snork} true
+monster_job = true
+prior = 120
+
+[mob_home@gar_sim_2_snork2]
+path_home = snork_home_2
+home_min_radius = 60
+home_max_radius = 90
+on_info = {=has_enemy} mob_home@gar_sim_2_snork2_fight
+
+[mob_home@gar_sim_2_snork2_fight]
+path_home = snork_home_2
+home_min_radius = 90
+home_max_radius = 130
+aggressive = true
+on_info = {!has_enemy} mob_home@gar_sim_2_snork2
+
+
+
+
+[logic@gar_sim_2_snork3]
+active = mob_home@gar_sim_2_snork3
+suitable = {=is_monster_snork} true
+monster_job = true
+prior = 120
+
+[mob_home@gar_sim_2_snork3]
+path_home = snork_home_2
+home_min_radius = 60
+home_max_radius = 90
+on_info = {=has_enemy} mob_home@gar_sim_2_snork3_fight
+
+[mob_home@gar_sim_2_snork3_fight]
+path_home = snork_home_2
+home_min_radius = 90
+home_max_radius = 130
+aggressive = true
+on_info = {!has_enemy} mob_home@gar_sim_2_snork3
