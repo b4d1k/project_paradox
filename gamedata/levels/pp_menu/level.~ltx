@@ -1,0 +1,15 @@
+[map_usage]
+ver=1.0
+deathmatch
+teamdeathmatch
+artefacthunt
+capturetheartefact
+dominationzone
+teamdominationzone
+;
+[level_map]
+bound_rect = -0.009067,-38.997108,43.650228,-8.573528
+texture = map\map_pp_menu
+;
+;
+[sub_level_map]
